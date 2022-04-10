@@ -6,21 +6,27 @@ toc_sticky: true
 header:
   overlay_color: "#333"
   actions:
-    - label: "My CV (as of 2021/03)"
-      url: "https://github.com/johannesnicolaus/Awesome-CV/raw/master/resume.pdf"
+    - label: "My CV (as of 2022/03)"
+      url: "https://github.com/johannesnicolaus/minimal-mistakes/files/raw/master/20220307_CV.pdf"
     - label: "My current lab"
-      url: "http://www.protein.osaka-u.ac.jp/cell_systems/"
+      url: "https://groups.oist.jp/grsu"
 ---
 
 <h1>About me</h1>
 
-I have always been interested in science, especially biology since I was little. This brought me to where I currently am, studying for a master's degree in biological science at Osaka University. My current research is about the transcription factor NF-κB and its implications in B cell differentiation where I combine both fluorescence imaging and computational (multi-omics) approaches. In my spare time, I take care of my carnivorous plants, my pet tortoise, watch football, and play FIFA.
+I have always been interested in science, especially biology since I was little. This brought me to Osaka University, where I was able to do research on transcription regulation for my undergraduate and master's thesis. Currently, I have moved to Okinawa Institute of Science and Technology in Okinawa, Japan, currently working with plankton (Oikopleura) genomics. In my spare time, I take care of my carnivorous plants, my pet tortoise, watch football, and play FIFA.
 
-I am currently using R and shell scripts for most of my work, however I am also currently learning python for image analysis.
+I am currently using R and shell scripts for most of my work, and is excited to learn nextflow during my PhD.
 
 ## Education
 
-* **Master of Science, Graduate School of Science, Osaka University (April 2020-March 2022, expected)**
+* **Doctor of Philosophy, Okinawa Institute of Technology Graduate University (April 2021 - Current)**
+    * Current laboratory: <a href="https://groups.oist.jp/grsu" target="_blank">Genomic and Regulatory Systems Unit</a> (PI: Nicholas Luscombe)
+    * Currently still a rotation student
+
+<br>
+
+* **Master of Science, Graduate School of Science, Osaka University (April 2020-March 2022)**
     * Major: Biological Sciences
     * Laboratory: <a href="http://www.protein.osaka-u.ac.jp/cell_systems/" target="_blank">Laboratory of Cell Systems</a> (PI: Mariko Okada)
     * Project: NF-κB mediated transcriptional regulation in B cell
@@ -93,6 +99,8 @@ I am currently using R and shell scripts for most of my work, however I am also 
         * Antibiotic susceptibility testing
 
 ## Organizational experience
+
+* **Secretary General - Indonesian Student Association in Japan (2020-2021)**
 
 * **Secretary General - Indonesian Student Association in Japan (2019-2020)**
 
