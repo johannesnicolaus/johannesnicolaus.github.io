@@ -6,6 +6,8 @@ toc: true
 toc_sticky: true
 feature_image: "/assets/images/2022-04-17/oist.jpg"
 canonical_url: "https://jnicolaus.com/road-to-phd/"
+header:
+  image: "/assets/images/2022-04-17/oist.jpg"
 ---
 
 Hi there, I haven't updated this blog for so long! I have been busy with research and the whole pandemic did not help with the current situation. But, to recap things that happened in the last 2 years.
