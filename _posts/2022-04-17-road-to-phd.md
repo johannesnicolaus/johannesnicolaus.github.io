@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Landing a PhD position
+title: "Landing a PhD position"
 author_profile: true
 toc: true
 toc_sticky: true
