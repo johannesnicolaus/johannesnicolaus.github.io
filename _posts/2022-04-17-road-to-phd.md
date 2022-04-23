@@ -7,7 +7,7 @@ toc_sticky: true
 feature_image: "/assets/images/2022-04-17/oist.jpg"
 ---
 
-Hi there, I haven't updated this blog for so long! I have been busy with research and the whole pandemic did not help with the current situation. But, to recap things that happened in the last 2 years:
+Hi there, I haven't updated this blog for so long! I have been busy with research and the whole pandemic did not help with the current situation. But, to recap things that happened in the last 2 years.
 
 I have finally finished my Masters in Osaka University and is currently. There were quite a lot of hurdles during my master’s study, mostly with research, and the pandemic. Nevertheless, it was largely fruitful, I was able to finish with 4 publications as the first author: a [research paper](https://www.biorxiv.org/content/10.1101/2021.07.13.452147v2), which is currently under minor revision, a review paper which is also under minor revision, a book chapter about fluorescence imaging methods which should be published soon, and another [book chapter](https://www.ishiyaku.co.jp/magazines/ayumi/AyumiBookDetail.aspx?BC=927610) in Japanese about single cell analysis. Now, I’m on my way to Okinawa, Japan, to start my PhD at Okinawa Institute of Science and Technology (OIST), which is a new and very beautiful campus surrounded by spectacular beaches.
 
