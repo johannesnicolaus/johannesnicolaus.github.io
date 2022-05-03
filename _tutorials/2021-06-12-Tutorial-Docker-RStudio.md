@@ -17,7 +17,7 @@ Essentially, Docker serves similar to a virtual machine (VM)
 
 The term **Image** and **Container** got me confused avt first, and therefore I'd like to briefly introduce them. In short, Image consists of the packages/apps and the enironment required by the application to run. On the other hand, a container is a running instance of the image, which consists of the image and whatever other files you have inside.
 
-![concept](../assets/images/2021-06-12/rstudio-docker.png)
+![concept](/assets/images/2021-06-12/rstudio-docker.png)
 
 ---
 

@@ -19,7 +19,7 @@ Some of the advantages of using a container in your workflow is that it adds rep
 
 Basically, you just build and install all the needed packages on your local computer onto a container, then you copy that container to the HPC and then you can run it without installing.
 
-![concept](../assets/images/2021-05-22/concept.png)
+![concept](/assets/images/2021-05-22/concept.png)
 
 Adapted from: [here](https://alibaba-cloud.medium.com/building-a-high-performance-container-solution-with-super-computing-cluster-and-Singularity-4115a88679be)
 
