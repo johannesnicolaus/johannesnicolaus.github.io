@@ -3,7 +3,9 @@ layout: collection
 title: "Tutorials"
 permalink: /tutorials/
 author_profile: true
-collection: tuts
-entries_layout: grid
+collection: tutorials
+sort_by: date
+sort_order: reverse
+# entries_layout: grid
 ---
 
