@@ -289,3 +289,13 @@ collections:
   tutorials:
     output: true
     permalink: /:collection/:path/
+
+defaults:
+  # _tutorials
+  - scope:
+      path: ""
+      type: tutorials
+    values:
+      layout: single
+      author_profile: true
+      share: true
