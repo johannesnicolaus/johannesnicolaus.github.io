@@ -45,7 +45,7 @@ The microscope I used throughout this research was mostly the confocal microscop
 After a couple of months, I realized there was another trouble where the laser got very weak and the images produced were highly noisy. This time, the fix came quite quick, and I was able to continue experiments straight away after 1-2 weeks. If I'm not mistaken, some of the mechanical parts were moving around and thus the efficiency was reduced.
 
 <figure>
-    <a href="../assets/images/2022-06-30/graphical_abstract.jpg"><img src="../assets/images/2022-06-30/graphical_abstract.jpg"></a>
+    <a href="../assets/images/2022-06-30/microscope.jpg"><img src="../assets/images/2022-06-30/microscope.jpg"></a>
     <figcaption class="my-auto">My trusty confocal microscope.</figcaption>
 </figure>
 
