@@ -1,5 +1,6 @@
 ---
 layout: single
+published: false
 title: "Tutorial: Deploying shiny app on AWS"
 author_profile: true
 toc: true
