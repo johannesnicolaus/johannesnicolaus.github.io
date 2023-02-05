@@ -103,6 +103,8 @@ This is a hiking (walking?) path in the outskirts of the downtown, which is reac
 <div class="separator" style="clear: both; text-align: center;">
 <a href="../assets/images/2023-02-01/philosopher_walk.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
 <img border="0"  src="../assets/images/2023-02-01/philosopher_walk.jpg" height="250" />
+</a>
+&nbsp;
 <a href="../assets/images/2023-02-01/philosopher_walk_2.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
 <img border="0"  src="../assets/images/2023-02-01/philosopher_walk_2.jpg" height="250" />
 <a href="../assets/images/2023-02-01/philosopher_walk_3.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
