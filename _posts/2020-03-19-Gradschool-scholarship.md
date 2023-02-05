@@ -78,7 +78,8 @@ Contrary to the interview of Nitori, the atmosphere was quite tense as I was dir
 <div class="separator" style="clear: both; text-align: center;">
 <a href="../assets/images/2020-03-19/itoen.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
 <img border="0"  src="../assets/images/2020-03-19/itoen.jpg" width="200" />
-</a>&nbsp;<img src="../assets/images/2020-03-19/oiocha.jpg" width="200" />
+</a>&nbsp;<a href="../assets/images/2020-03-19/oiocha.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+<img src="../assets/images/2020-03-19/oiocha.jpg" width="200" /></a>
 </div>
 <div style="text-align: center;">Left: Ito-en headquarters in Tokyo.
 </div>

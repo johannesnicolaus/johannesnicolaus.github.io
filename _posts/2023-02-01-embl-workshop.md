@@ -1,6 +1,6 @@
 ---
 layout: single
-published: false
+published: true
 title: "EMBL single-cell workshop in Heidelberg, Germany"
 author_profile: true
 toc: true
@@ -23,29 +23,30 @@ I've heard really good reviews about EMBO workshops which compelled me to sign u
 
 It was a week long workshop consisting of hands-on experimental and computational practicals, with some lectures between. The main techniques used during the workshop were:
 
-- DNTR-seq: Direct nuclear tagmentation and RNA-seq
+- DNTR-seq: Direct nuclear tagmentation and RNA-seq (genome and RNA-seq on the same single-cell)
 - Strand-seq: Sequencing of DNA template strands during DNA replication
 In which both are done in single-cells.
 
-Further, we also had lectures that include single-cell epigenetic sequencing and single-cell sorting techniques among others.
-
-I think it's definitely a good workshop for people who will actually be doing these experiments in their projects.
+Further, we also had lectures that include single-cell epigenetic sequencing and single-cell sorting techniques among others. I think it's definitely a good workshop for people who will be doing these experiments in their projects.
 
 ### The people
 
 By the people I mean the instructors and other participants. They were some of the greatest people I've ever met and we really got along with each other.
 
-Let me start with the participants, most of the attendees were from Europe, which is probably because of proximity. I also noticed that all of the participants were wet biologists, with most having barely no background in computational work. It was nice that we were able to share our experiences dealing with different things, as we all have different backgrounds.
-
-The instructors were also really helpful along the course. We went out downtown for dinner and drinks which was super nice.
+Most of the attendees were from Europe, which is probably because of proximity. I also noticed that all of the participants were wet biologists, with most having barely no background in computational work. It was nice that we were able to share our experiences dealing with different things, as we all have different backgrounds. The instructors were also really helpful along the course. We went out downtown for dinner and drinks which was super nice.
 
 In general, everyone was very supportive and friendly, definitely made it worthwile attending the course.
 
 ### During the workshop
 
-We had plenty of coffee breaks and food during the workshop, and I have to say that their food service was amazing. We also had wine and beer for dinner everyday which was really nice.
+While the workshop itself was comprehensive, I feel one of the most important part of the workshop was networking. We were able to talk to each other and also the instructor during the coffee breaks, lunch and dinner. I have to say that their food service was amazing.
 
-
+<br>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="../assets/images/2023-02-01/food_cafeteria.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+<img border="0"  src="../assets/images/2023-02-01/food_cafeteria.jpg" height="350" />
+</a>
+</div>
 
 ### Some comments
 
@@ -70,33 +71,100 @@ It was totally different from Japan, and I think that it was a very beautiful ci
 
 ### Downtown Heidelberg
 
+It's amazing! I've never been to other cities in Europe, but it totally feels like Europe.
+
+<br>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="../assets/images/2023-02-01/downtown.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+<img border="0"  src="../assets/images/2023-02-01/downtown.jpg" height="350" />
+</a>
+</div>
+
 ### Schloss Heidelberg
 
+This is probably the top tourist spot in Heidelberg. I think it was a very relaxing and nice spot.
 
+<br>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="../assets/images/2023-02-01/castle.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+<img border="0"  src="../assets/images/2023-02-01/castle.jpg" height="250" />
+</a>
+&nbsp;
+<a href="../assets/images/2023-02-01/castle_2.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+<img border="0"  src="../assets/images/2023-02-01/castle_2.jpg" height="250" />
+</a>
+</div>
 
 ### Philosophers' walk
 
-This is just a path around 
+This is a hiking (walking?) path in the outskirts of the downtown, which is reachable by walking from downtown. Through this path, we can see the whole city, unfortunately on that day it was too foggy and I wasn't able to see anything. But, it was a really nice walk even though it was a bit tiring to go up the stairs.
+
+<br>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="../assets/images/2023-02-01/philosopher_walk.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+<img border="0"  src="../assets/images/2023-02-01/philosopher_walk.jpg" height="250" />
+<a href="../assets/images/2023-02-01/philosopher_walk_2.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+<img border="0"  src="../assets/images/2023-02-01/philosopher_walk_2.jpg" height="250" />
+<a href="../assets/images/2023-02-01/philosopher_walk_3.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+<img border="0"  src="../assets/images/2023-02-01/philosopher_walk_3.jpg" height="250" />
+
+</a>
+</div>
 
 ### Bars!
 
-The night life at Heidelberg was really not bad. The bars were very lively and had nice beer for cheap (well not expensive but not super cheap either).
+The night life at Heidelberg was really not bad. The bars were very lively and had nice beer for cheap (well not expensive but not super cheap either). After the workshop, we went to several bars to get drinks, unfortunately we were too tired and had to leave early.
 
+<br>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="../assets/images/2023-02-01/bar.jpeg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+<img border="0"  src="../assets/images/2023-02-01/bar.jpeg" height="250" />
+</a>
+</div>
 
 ### Beer beer and beer
 
 I've heard stories about German beer being really good so I did try it. It was amazing. Well, I've had similar stuff in Japan, but it's the norm there.
 
+<br>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="../assets/images/2023-02-01/beer_1.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+<img border="0"  src="../assets/images/2023-02-01/beer_1.jpg" height="250" />
+</a>
+&nbsp;
+<a href="../assets/images/2023-02-01/beer_1.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+<img border="0"  src="../assets/images/2023-02-01/beer_2.jpg" height="250" />
+</a>
+</div>
+
 ### The food
 
 The food was really great as well, but very very heavy, and everything tasted similar. I think I started wanting asian food after my 3rd day there hahaha. I particularly loved the schnitzel and the pork knuckle. Here are some of the places I thought were worth visiting:
 
-Schnitzelbank
+First, I was recommended by the tech in my lab to get schnitzel at this place. I ended up going here twice because I really liked it. The portion was generous, the waiter was really nice, and the food was awesome. I enjoyed the mushroom sauce Schnitzel.
 
+Weinstube Schnitzelbank: https://goo.gl/maps/1NujA1Fu7oSgncSW9
 
+Here is the picture of the garlic sauce schnitzel:
 
+<br>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="../assets/images/2023-02-01/schnitzel.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+<img border="0"  src="../assets/images/2023-02-01/schnitzel.jpg" height="350" />
+</a>
+</div>
+
+Next, I wanted to get pork knuckle and to have some beers. Ended up going to this place, and I have to say that the pork knuckle was really great.
+
+Vetter's Alt Heidelberger Brauhaus: https://goo.gl/maps/RrfJHd9dCzyBUejv5
+
+<br>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="../assets/images/2023-02-01/pork_knuckle.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+<img border="0"  src="../assets/images/2023-02-01/pork_knuckle.jpg" height="350" />
+</a>
+</div>
 
 ## Conclusions
 
-This was a very nice trip, my first time in Europe and definitely was totally different with what I was used to. 
-
+This was a very nice trip, my first time in Europe and definitely was totally different with what I was used to. I highly recommend the practical course, and I believe that other EMBO workshops are at the same level.
