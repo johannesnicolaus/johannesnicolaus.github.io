@@ -7,7 +7,7 @@ header:
   overlay_color: "#333"
   actions:
     - label: "My CV (as of 2022/03)"
-      url: "https://github.com/johannesnicolaus/minimal-mistakes/files/20220307_CV.pdf"
+      url: "https://github.com/johannesnicolaus/johannesnicolaus.github.io/raw/master/files/20220307_CV.pdf"
     - label: "Google scholar"
       url: "https://scholar.google.com/citations?user=5jM6ZzEAAAAJ&hl=en"
 ---
