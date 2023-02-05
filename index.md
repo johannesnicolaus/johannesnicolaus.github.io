@@ -20,7 +20,7 @@ I am currently using R and shell scripts for most of my work, and is excited to 
 
 ## Education
 
-* **Doctor of Philosophy, Okinawa Institute of Technology Graduate University (April 2021 - Current)**
+* **Doctor of Philosophy, Okinawa Institute of Technology Graduate University (April 2022 - Current)**
     * Current lab: <a href="https://groups.oist.jp/mmu" target="_blank">Marine Macroevolution Unit</a> (PI: Lauren Sallan)
     * Currently still a rotation student
     * Rotations at the <a href="https://groups.oist.jp/grsu" target="_blank">Genomic and Regulatory Systems Unit</a> and the <a href="https://groups.oist.jp/meedu" target="_blank">Marine Eco-Evo-Devo Unit</a>
