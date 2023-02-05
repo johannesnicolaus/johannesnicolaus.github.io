@@ -7,9 +7,9 @@ header:
   overlay_color: "#333"
   actions:
     - label: "My CV (as of 2022/03)"
-      url: "https://github.com/johannesnicolaus/minimal-mistakes/files/raw/master/20220307_CV.pdf"
-    - label: "My current lab"
-      url: "https://groups.oist.jp/grsu"
+      url: "https://github.com/johannesnicolaus/minimal-mistakes/files/20220307_CV.pdf"
+    - label: "Google scholar"
+      url: "https://scholar.google.com/citations?user=5jM6ZzEAAAAJ&hl=en"
 ---
 
 <h1>About me</h1>
@@ -21,8 +21,9 @@ I am currently using R and shell scripts for most of my work, and is excited to 
 ## Education
 
 * **Doctor of Philosophy, Okinawa Institute of Technology Graduate University (April 2021 - Current)**
-    * Current laboratory: <a href="https://groups.oist.jp/grsu" target="_blank">Genomic and Regulatory Systems Unit</a> (PI: Nicholas Luscombe)
+    * Current lab: <a href="https://groups.oist.jp/mmu" target="_blank">Marine Macroevolution Unit</a> (PI: Lauren Sallan)
     * Currently still a rotation student
+    * Rotations at the <a href="https://groups.oist.jp/grsu" target="_blank">Genomic and Regulatory Systems Unit</a> and the <a href="https://groups.oist.jp/meedu" target="_blank">Marine Eco-Evo-Devo Unit</a>
 
 <br>
 
