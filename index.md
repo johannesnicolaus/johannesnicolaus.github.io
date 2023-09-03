@@ -14,16 +14,16 @@ header:
 
 <h1>About me</h1>
 
-I have always been interested in science, especially biology since I was little. This brought me to Osaka University, where I was able to do research on transcription regulation for my undergraduate and master's thesis. Currently, I have moved to Okinawa Institute of Science and Technology in Okinawa, Japan, currently working with plankton (Oikopleura) genomics. In my spare time, I take care of my carnivorous plants, my pet tortoise, watch football, and play FIFA.
+I have always been interested in science, especially biology since I was little. This brought me to Osaka University, where I was able to do research on transcription regulation for my undergraduate and master's thesis. Currently, I have moved to Okinawa Institute of Science and Technology in Okinawa, Japan, currently working with plankton (Oikopleura) genomics. In my spare time, I take care of my carnivorous plants, 3D print, watch football, and play FIFA.
 
-I am currently using R and shell scripts for most of my work, and is excited to learn nextflow during my PhD.
+I am currently using R and shell scripts for most of my work, and is learning nextflow during my PhD.
 
 ## Education
 
 * **Doctor of Philosophy, Okinawa Institute of Technology Graduate University (April 2022 - Current)**
-    * Current lab: <a href="https://groups.oist.jp/mmu" target="_blank">Marine Macroevolution Unit</a> (PI: Lauren Sallan)
-    * Currently still a rotation student
-    * Rotations at the <a href="https://groups.oist.jp/grsu" target="_blank">Genomic and Regulatory Systems Unit</a> and the <a href="https://groups.oist.jp/meedu" target="_blank">Marine Eco-Evo-Devo Unit</a>
+    * Current lab: <a href="https://groups.oist.jp/grsu" target="_blank">Genomic and Regulatory Systems Unit</a> (PI: Nicholas Luscombe)
+    * PhD project: Epigenetic landscape in the cryptic species of *Oikopleura dioica*
+    * Rotations at the <a href="https://groups.oist.jp/mmu" target="_blank">Marine Macroevolution Unit</a> and the <a href="https://groups.oist.jp/meedu" target="_blank">Marine Eco-Evo-Devo Unit</a>
 
 <br>
 
