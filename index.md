@@ -14,7 +14,7 @@ header:
 
 <h1>About me</h1>
 
-I have always been interested in science, especially biology since I was little. This brought me to Osaka University, where I was able to do research on transcription regulation for my undergraduate and master's thesis. Currently, I have moved to Okinawa Institute of Science and Technology in Okinawa, Japan, currently working with plankton (Oikopleura) genomics. In my spare time, I take care of my carnivorous plants, 3D print, watch football, fish and dive.
+I have always been interested in science, especially biology since I was little. This brought me to Osaka University, where I was able to do research on transcription regulation for my undergraduate and master's thesis. Currently, I have moved to Okinawa Institute of Science and Technology in Okinawa, Japan, currently working on the transcriptional regulation of the scrambled genome of O. dioica. In my spare time, I take care of my carnivorous plants, 3D print, watch football, fish and dive.
 
 I am currently using R and shell scripts for most of my work, and is learning nextflow during my PhD.
 
