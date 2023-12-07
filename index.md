@@ -22,7 +22,7 @@ I am currently using R and shell scripts for most of my work, and is learning ne
 
 * **Doctor of Philosophy, Okinawa Institute of Technology Graduate University (April 2022 - Current)**
     * Current lab: <a href="https://groups.oist.jp/grsu" target="_blank">Genomic and Regulatory Systems Unit</a> (PI: Nicholas Luscombe)
-    * PhD project: Epigenetic landscape in the cryptic species of *Oikopleura dioica*
+    * PhD project: Epigenetic landscape of the cryptic species of *Oikopleura dioica*
     * Rotations at the <a href="https://groups.oist.jp/mmu" target="_blank">Marine Macroevolution Unit</a> and the <a href="https://groups.oist.jp/meedu" target="_blank">Marine Eco-Evo-Devo Unit</a>
 
 <br>
