@@ -26,26 +26,29 @@ I have several favored diving spots, but I'm particularly fond of the sandy bott
 <br>
 <div class="separator" style="clear: both; text-align: center;">
 <a href="..//assets/images/2023-12-07/turtle.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
-<img border="0"  src="../assets/images/2023-12-07/turtle.jpg" height="350" />
+<img border="0"  src="../assets/images/2023-12-07/turtle.jpg" height="300" />
 </a>
 </div>
+<br>
 
 Then, there is the clownfish that was quite shallow, this was also very nice.
 
 <br>
 <div class="separator" style="clear: both; text-align: center;">
 <a href="../assets/images/2023-12-07/clownfish.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
-<img border="0"  src="../assets/images/2023-12-07/clownfish.jpg" height="350" />
+<img border="0"  src="../assets/images/2023-12-07/clownfish.jpg" height="300" />
 </a>
 </div>
+<br>
 
 Finally, I took a picture of this cuttlefish almost 30m deep. It was as if it was trying to get our attention for pictures!
 
 <br>
 <div class="separator" style="clear: both; text-align: center;">
 <a href="../assets/images/2023-12-07/cuttlefish.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
-<img border="0"  src="../assets/images/2023-12-07/cuttlefish.jpg" height="350" />
+<img border="0"  src="../assets/images/2023-12-07/cuttlefish.jpg" height="300" />
 </a>
 </div>
+<br>
 
 And there are some of the best pictures I took in Seragaki. I hope I will be able to get even better pictures in the future!
