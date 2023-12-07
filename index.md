@@ -14,7 +14,7 @@ header:
 
 <h1>About me</h1>
 
-I have always been interested in science, especially biology since I was little. This brought me to Osaka University, where I was able to do research on transcription regulation for my undergraduate and master's thesis. Currently, I have moved to Okinawa Institute of Science and Technology in Okinawa, Japan, currently working on the transcriptional regulation of the scrambled genome of O. dioica. In my spare time, I take care of my carnivorous plants, 3D print, watch football, fish and dive.
+I have always been interested in science, especially biology since I was little. This brought me to Osaka University, where I was able to do research on transcription regulation for my undergraduate and master's thesis. Currently, I have moved to Okinawa Institute of Science and Technology in Okinawa, Japan, currently working on the transcriptional regulation of the scrambled genome of *O. dioica*. In my spare time, I take care of my carnivorous plants, 3D print, watch football, fish and scuba dive.
 
 I am currently using R and shell scripts for most of my work, and is learning nextflow during my PhD.
 
@@ -48,6 +48,7 @@ I am currently using R and shell scripts for most of my work, and is learning ne
 ## Publications and conference presentations
 
 * ### Publications
+    * **JN Wibisana**, R Sallan, T Kubo, L Sallan. Modification of clinical dental impression methods to obtain dental traits from living and whole non-mammalian vertebrates. BioRxiv, 2023. [link](https://www.biorxiv.org/content/10.1101/2023.11.21.567763v1.article-info)
     * **JN Wibisana**, T Inaba, Y Sako, M Okada. Quantitative Imaging Analysis of NF-κB for Mathematical Modeling Applications. Methods in Molecular Biology: Computational Modeling of Signaling Networks, 2023. [link](https://link.springer.com/protocol/10.1007/978-1-0716-3008-2_11)
     * Y Harada, T Sasaki, **JN Wibisana**, [...], M Kubo. Type 2 helper T cells convert into Interleukin-13-expressing follicular helper T cells after antigen repriming, 2023. [link](https://www.jstage.jst.go.jp/article/trs/5/1/5_2022-010/_article/-char/ja/)
     * K Iida, J Kondo, **JN Wibisana**, M Inoue, M Okada. ASURAT: functional annotation-driven unsupervised clustering of single-cell transcriptomes. Bioinformatics, 2022. [link](https://academic.oup.com/bioinformatics/article-abstract/38/18/4330/6655687)
