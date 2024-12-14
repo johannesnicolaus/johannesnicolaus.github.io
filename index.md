@@ -6,8 +6,8 @@ toc_sticky: true
 header:
   overlay_color: "#333"
   actions:
-    - label: "My CV (as of 2023/09)"
-      url: "https://github.com/johannesnicolaus/johannesnicolaus.github.io/raw/master/files/20230903_CV.pdf"
+    - label: "My CV (as of 2024/12)"
+      url: "https://github.com/johannesnicolaus/johannesnicolaus.github.io/raw/master/files/20231214_CV.pdf"
     - label: "Google scholar"
       url: "https://scholar.google.com/citations?user=5jM6ZzEAAAAJ&hl=en"
 ---
@@ -22,7 +22,7 @@ I am currently using R and shell scripts for most of my work, and is learning ne
 
 * **Doctor of Philosophy, Okinawa Institute of Technology Graduate University (April 2022 - Current)**
     * Current lab: <a href="https://groups.oist.jp/grsu" target="_blank">Genomic and Regulatory Systems Unit</a> (PI: Nicholas Luscombe)
-    * PhD project: Epigenetic landscape of the cryptic species of *Oikopleura dioica*
+    * PhD project: Gene regulation of the scrambled genome of *Oikopleura dioica*
     * Rotations at the <a href="https://groups.oist.jp/mmu" target="_blank">Marine Macroevolution Unit</a> and the <a href="https://groups.oist.jp/meedu" target="_blank">Marine Eco-Evo-Devo Unit</a>
 
 <br>
@@ -48,7 +48,8 @@ I am currently using R and shell scripts for most of my work, and is learning ne
 ## Publications and conference presentations
 
 * ### Publications
-    * **JN Wibisana**, R Sallan, T Kubo, L Sallan. Modification of clinical dental impression methods to obtain dental traits from living and whole non-mammalian vertebrates. BioRxiv, 2023. [link](https://www.biorxiv.org/content/10.1101/2023.11.21.567763v1.article-info)
+    * **JNWibisana**, C Plessy, N Dierckxsens, J Miao, A Masunaga, NM Luscombe. The complete mitogenome of an unidentified Oikopleura species. F1000Research, 2024. [link](https://f1000research.com/articles/13-1357/v1)
+    * **JN Wibisana**, R Sallan, T Kubo, L Sallan. Modifiable clinical dental impression methods to obtain whole-mouth and detailed dental traits from vertebrates. Journal of Morphology, 2024. Accepted.
     * **JN Wibisana**, T Inaba, Y Sako, M Okada. Quantitative Imaging Analysis of NF-κB for Mathematical Modeling Applications. Methods in Molecular Biology: Computational Modeling of Signaling Networks, 2023. [link](https://link.springer.com/protocol/10.1007/978-1-0716-3008-2_11)
     * Y Harada, T Sasaki, **JN Wibisana**, [...], M Kubo. Type 2 helper T cells convert into Interleukin-13-expressing follicular helper T cells after antigen repriming, 2023. [link](https://www.jstage.jst.go.jp/article/trs/5/1/5_2022-010/_article/-char/ja/)
     * K Iida, J Kondo, **JN Wibisana**, M Inoue, M Okada. ASURAT: functional annotation-driven unsupervised clustering of single-cell transcriptomes. Bioinformatics, 2022. [link](https://academic.oup.com/bioinformatics/article-abstract/38/18/4330/6655687)
