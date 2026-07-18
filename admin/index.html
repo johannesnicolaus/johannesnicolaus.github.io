@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Sveltia CMS</title>
+  </head>
+  <body>
+    <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+    <script>
+      // Initialize the CMS and let it load admin/config.yml automatically
+      if (typeof CMS !== 'undefined' && CMS && typeof CMS.init === 'function') {
+        CMS.init();
+      }
+    </script>
+  </body>
+</html>

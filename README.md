@@ -48,6 +48,10 @@ When you are initially working on your website, it is very useful to be able to 
 1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
 
     If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
+
+## Admin (Sveltia CMS)
+
+This project includes a Sveltia CMS admin in the `admin/` folder. See [admin/README.md](admin/README.md) for setup and local testing instructions (personal access token or OAuth).
     Install Gems Locally (Recommended):
     ```bash
     bundle config set --local path 'vendor/bundle'

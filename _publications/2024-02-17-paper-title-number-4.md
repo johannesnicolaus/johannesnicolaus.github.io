@@ -1,13 +1,11 @@
 ---
-title: "Paper Title Number 4"
+title: "Type 2 helper T cells convert into Interleukin-3-expressing follicular helper T cells after antigen repriming"
 collection: publications
-category: conferences
-permalink: /publication/2024-02-17-paper-title-number-4
-excerpt: 'This paper is about fixing template issue #693.'
-date: 2024-02-17
-venue: 'GitHub Journal of Bugs'
-paperurl: 'https://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub Journal of Bugs</i>. 1(3).'
+category: research
+permalink: /publication/2022-01-01-type-2-helper-t-cells-convert-into-interleukin-3-expressing-follicular-helper-t-cells-after-antigen-repriming
+date: 2022-01-01
+venue: 'Translational and Regulatory Sciences'
+authors: '**Y Harada**, T Sasaki, JN Wibisana, M Okada, C Liu, H Ueno, PD Burrows, M Kubo*'
+citation: 'Harada, Y., Sasaki, T., Wibisana, J.N., Okada, M., Liu, C., Ueno, H., Burrows, P.D., and Kubo, M. (2022). "Type 2 helper T cells convert into Interleukin-3-expressing follicular helper T cells after antigen repriming." <i>Translational and Regulatory Sciences</i>.'
 ---
-
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
+Research article on T helper cell reprogramming.

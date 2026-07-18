@@ -1,0 +1,33 @@
+{%- comment -%}
+Renders publications from _data/publications.yml, grouped by category and year.
+Usage:
+  {% include publication-list.html category="research" heading="Research papers" %}
+{%- endcomment -%}
+
+{%- assign entries = site.data.publications | where: "category", include.category -%}
+{%- if entries and entries.size > 0 -%}
+<h1 id="{{ include.category }}">{{ include.heading }}</h1>
+
+{%- assign years = entries | map: "year" | uniq | sort | reverse -%}
+{%- for y in years %}
+<h2 id="{{ include.category }}-{{ y }}">{{ y }}</h2>
+<ol class="publication-list">
+  {%- for p in entries -%}
+    {%- if p.year == y -%}
+      {%- if p.url -%}
+        {%- assign link = p.url -%}
+      {%- elsif p.doi -%}
+        {%- assign link = p.doi | prepend: "https://doi.org/" -%}
+      {%- else -%}
+        {%- assign link = nil -%}
+      {%- endif %}
+  <li>
+    {{ p.authors | markdownify | remove: "<p>" | remove: "</p>" }} ({{ p.year }}).
+    {% if link %}<a href="{{ link }}" target="_blank" rel="noopener noreferrer">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}.
+    <i>{{ p.venue }}</i>.
+  </li>
+    {%- endif -%}
+  {%- endfor %}
+</ol>
+{%- endfor %}
+{%- endif -%}

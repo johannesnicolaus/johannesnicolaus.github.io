@@ -1,0 +1,26 @@
+{%- comment -%}
+Renders talks from _data/talks.yml, grouped by year within a chosen type.
+Usage:
+  {% include talk-list.html type="oral"   heading="Oral presentations" %}
+  {% include talk-list.html type="poster" heading="Poster presentations" %}
+{%- endcomment -%}
+
+{%- assign entries = site.data.talks | where: "type", include.type -%}
+{%- if entries and entries.size > 0 -%}
+<h1 id="talks-{{ include.type }}">{{ include.heading }}</h1>
+
+{%- assign years = entries | map: "year" | uniq | sort | reverse -%}
+{%- for y in years %}
+<h2 id="talks-{{ include.type }}-{{ y }}">{{ y }}</h2>
+<ol class="talk-list">
+  {%- for t in entries -%}
+    {%- if t.year == y %}
+  <li>
+    {% if t.url %}<a href="{{ t.url }}"><strong>{{ t.title }}</strong></a>{% else %}<strong>{{ t.title }}</strong>{% endif %}.
+    <i>{{ t.venue }}</i>{% if t.location %}, {{ t.location }}{% endif %}{% if t.date %} ({{ t.date }}){% endif %}.
+  </li>
+    {%- endif -%}
+  {%- endfor %}
+</ol>
+{%- endfor %}
+{%- endif -%}

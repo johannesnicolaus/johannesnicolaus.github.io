@@ -1,0 +1,34 @@
+---
+title: First Semester in the CBCMP
+date: '2017-04-03T08:34:00.004-07:00'
+author: Johannes Nicolaus Wibisana
+tags: 
+author_profile: true
+modified_time: '2017-04-03T08:34:59.887-07:00'
+layout: single
+excerpt: "Haven't posted in a while, first sem was really hectic... Let me sum up my first sem in the CBCMP then.."
+---
+
+Haven't posted in a while, first sem was really hectic... Let me sum up my first sem in the CBCMP then..
+
+First time I came for the orientation I wasn't really surprised, I thought most of the students there were in the CBCMP. Yet later I was surprised to find out that apparently only 9 of all the students in the G30 program were in the CBCMP, the remaining 16 or idk how many were actually in the HUS (Human Science).
+
+For the first semester, we were given a list of classes we are supposed to take (core classes), along with elective classes that we are supposed to take (at least 6 for the first 3 sem if I'm not mistaken). In total, I took 18 classes.
+
+Here's how the schedule looks like:
+
+[](https://4.bp.blogspot.com/-B-w10ISVXUc/WOJqAuR7ciI/AAAAAAAAGkM/GLPI-b-fZekD8LQSYWfQz5m4q3Y_VRlSgCLcB/s1600/Screenshot_20170325-211955.png)
+
+Each class is 1 and a half hour and doesn't depend on the number of credits allocated. The ones labelled red are the compulsory, the blue are elective and the yellow language credits.
+
+In addition to that, we also have compulsory Japanese classes, which is called JA *00, in which the * is the level you're in, beginning with 1 to the most advanced level 7. I was put in JA 500 in accordance to my test scores that were done online. however, once you passed JA 600 you don't have to take more Japanese classes, but are allowed to take normal elective classes in Japanese or proceed to the higher level of Japanese.
+
+For me, I attended several JA500 classes for the first 2 weeks, but in the end I changed and registered for JA600 as I found JA500 too easy. Unfortunately, the gap of JA500 and JA600 was quite big, in JA600 almost everyone was really fluent and the exchange students taking JA600 mostly have passed JLPT N1 (highest level of Japanese proficiency test). I had quite a problem trying to catch up with the class, so my advice is if your Japanese proficiency is not very good, don't aim too high, because you can't retake the class if you don't fail and you can't downgrade. However, if you want to get over with Japanese classes quickly then do so.
+
+So we had several core subjects that we are required to take, including: bio, chem, physics, maths, seminar, PE, most core subjects are 2 credits per class, we do have 2 classes each for bio, chem, and maths though. It was 1 credit each for PE and seminar, in addition to that we also have information literacy in which we discuss different things regarding copyright, gene database and such.
+
+Apparently the grades so far aren't curved, and therefore for some subjects there might be no one getting an S or everyone getting S, for example for Biology, only 1 one student got an S for 1 of 2 credits and the others were either As or Bs.
+
+So... there goes my first semester here, it was certainly a new experience moving from high school and also my language school. I do think that most elective subjects were useless as I didn't really learn anything and it actually brought down my final GPA. However, it was a great and fun first semester. The smaller the class size means fiercer competition though! Now it's still spring break but we already have classes again in a week...
+
+If you need more info just contact me! I'll try to give you more info on classes in the CBCMP as much as possible as a first year.

@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: johannesnicolaus/personal_website_2
+  # Recommended: set the branch you want the CMS to commit to
+  branch: main
+  # Allowed auth methods: oauth and/or token. Keep both enabled for flexibility.
+  auth_methods: [oauth, token]
+
+media_folder: /images
+public_folder: /images
+
+collections:
+  - name: posts
+    label: Posts
+    label_singular: Post
+    folder: _posts
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD", type: date, required: true }
+      - { label: Body, name: body, widget: markdown }

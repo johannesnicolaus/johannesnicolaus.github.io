@@ -1,0 +1,73 @@
+# Consolidated publication list.
+# Each entry:
+#   category: research | review | chapter
+#   year: integer (used for grouping)
+#   authors: string (use ** ** around your name for bold in markdown)
+#   title: string
+#   venue: journal / book name
+#   doi: (optional) e.g. 10.1002/jmor.70017
+#   url: (optional) explicit link, overrides doi
+#
+# Add new entries at the top. Order within a year is preserved as-listed.
+
+- category: research
+  year: 2025
+  authors: "**JN Wibisana**\\*, RA Sallan\\*, T Ota, P Puchenkov, T Kubo, L Sallan\\*"
+  title: "Modifiable clinical dental impression methods to obtain whole-mouth and detailed dental traits from vertebrates"
+  venue: "Journal of Morphology"
+  doi: "10.1002/jmor.70017"
+
+- category: research
+  year: 2025
+  authors: "G Sanchez-Serna, J Badia-Ramentol, P Bujosa, A Ferrandez-Roldan, NP Torres-Aguila, M Fabrega-Torrus, **JN Wibisana**\\*, MJ Mansfield, C Plessy, NM Luscombe, R Albalat, C Canestro"
+  title: "Less, but More: New Insights From Appendicularians on Chordate Fgf Evolution and the Divergence of Tunicate Lifestyles"
+  venue: "Molecular Biology and Evolution"
+  doi: "10.1093/molbev/msae260"
+
+- category: research
+  year: 2025
+  authors: "**JN Wibisana**, C Plessy\\*, N Diercxksens, J Miao, NM Luscombe"
+  title: "The complete mitogenome of an unidentified Oikopleura species"
+  venue: "F1000Research"
+  doi: "10.12688/f1000research.157311.1"
+
+- category: research
+  year: 2022
+  authors: "Y Harada, T Sasaki, **JN Wibisana**, M Okada, C Liu, H Ueno, PD Burrows, M Kubo\\*"
+  title: "Type 2 helper T cells convert into Interleukin-13-expressing follicular helper T cells after antigen repriming"
+  venue: "Translational and Regulatory Sciences"
+  doi: "10.33611/trs.2022-10"
+
+- category: research
+  year: 2022
+  authors: "**JN Wibisana**, T Inaba, H Shinohara, N Yumoto, T Hayashi, M Umeda, M Ebisawa, I Nikaido, Y Sako, M Okada\\*"
+  title: "Enhanced transcriptional heterogeneity mediated by NF-κB super-enhancers"
+  venue: "PLoS Genetics"
+  doi: "10.1371/journal.pgen.1010235"
+
+- category: research
+  year: 2022
+  authors: "K Iida\\*, J Kondo, **JN Wibisana**, M Inoue, M Okada"
+  title: "ASURAT: functional annotation-driven unsupervised clustering of single-cell transcriptomes"
+  venue: "Bioinformatics"
+  doi: "10.1093/bioinformatics/btac541"
+
+- category: review
+  year: 2022
+  authors: "**JN Wibisana**, M Okada\\*"
+  title: "Encoding and decoding NF-κB nuclear dynamics"
+  venue: "Current Opinion in Cell Biology"
+  doi: "10.1016/j.ceb.2022.102103"
+
+- category: review
+  year: 2021
+  authors: "**JN Wibisana**, K Iida, M Okada"
+  title: "Prediction of transcriptional regulation in immune cells through single-cell analysis"
+  venue: "Journal of Clinical and Experimental Medicine (Igaku no Ayumi)"
+
+- category: chapter
+  year: 2023
+  authors: "**JN Wibisana**, T Inaba, Y Sako, M Okada\\*"
+  title: "Quantitative imaging analysis of NF-κB for mathematical modelling applications"
+  venue: "Methods in Molecular Biology"
+  doi: "10.1007/978-1-0716-3008-2_11"

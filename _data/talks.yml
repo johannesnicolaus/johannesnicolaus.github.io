@@ -1,0 +1,64 @@
+# Consolidated talks/presentations.
+# Each entry:
+#   type: oral | poster
+#   scope: international | domestic   (used only for optional grouping if desired)
+#   year: integer (used for grouping)
+#   date: (optional) human-readable date, e.g. "August 2025"
+#   title: talk title
+#   venue: meeting / conference name
+#   location: city, country
+#   url: (optional) link to abstract or event page
+#
+# Add new entries at the top. Order within a year follows YAML order.
+
+# ---------------- International ----------------
+
+- type: poster
+  scope: international
+  year: 2025
+  date: "August 2025"
+  title: "Gene regulation of the scrambled genome of Oikopleura dioica"
+  venue: "CSHL Meeting: Mechanisms of Eukaryotic Transcription"
+  location: "Cold Spring Harbor, New York, USA"
+
+- type: poster
+  scope: international
+  year: 2024
+  date: "November 2024"
+  title: "Gene regulation of the scrambled genome of Oikopleura dioica"
+  venue: "EMBO Lecture Course: Evolutionary and Comparative Genomics"
+  location: "Nafplio, Greece"
+
+- type: poster
+  scope: international
+  year: 2021
+  date: "November 2021"
+  title: "Epigenetic landscape of the cryptic tunicate Oikopleura dioica"
+  venue: "EMBO Workshop: Animal Genomes"
+  location: "Sevilla, Spain"
+
+# ---------------- Domestic ----------------
+
+- type: oral
+  scope: domestic
+  year: 2025
+  date: "December 2025"
+  title: "Unraveling Genome Scrambling in a Miniature Chordate Genome Using Multiple Chromosome-level Assemblies"
+  venue: "The 47th Annual Meeting of the Molecular Biology Society of Japan"
+  location: "Kanagawa, Japan"
+
+- type: poster
+  scope: domestic
+  year: 2024
+  date: "November 2024"
+  title: "Enhancer-mediated transcriptional regulation in Oikopleura dioica"
+  venue: "The 46th Annual Meeting of the Molecular Biology Society of Japan"
+  location: "Fukuoka, Japan"
+
+- type: poster
+  scope: domestic
+  year: 2022
+  date: "November 2022"
+  title: "Enhancer-mediated transcriptional regulation in Oikopleura dioica"
+  venue: "The 45th Annual Meeting of the Molecular Biology Society of Japan"
+  location: "Chiba, Japan"

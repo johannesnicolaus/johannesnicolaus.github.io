@@ -1,0 +1,25 @@
+# Consolidated teaching / training experience.
+# Each entry:
+#   year: integer (used for grouping)
+#   date: (optional) human-readable date range, e.g. "2019 – 2022"
+#   role: e.g. "Instructor", "Trainer"
+#   title: description of the course / training
+#   venue: institution / lab / program
+#   location: (optional)
+#   url: (optional) link
+#
+# Add new entries at the top.
+
+- year: 2022
+  date: "2019 – 2022"
+  role: "Trainer"
+  title: "RNA-seq analysis training for visiting researchers"
+  venue: "Laboratory for Cell Systems (PI: Mariko Okada), Osaka University"
+  location: "Osaka, Japan"
+
+- year: 2022
+  date: "2019 – 2022"
+  role: "Coordinator"
+  title: "Bioinformatics training and website management"
+  venue: "Laboratory for Cell Systems, Osaka University"
+  location: "Osaka, Japan"
