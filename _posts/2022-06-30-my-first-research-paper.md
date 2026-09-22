@@ -1,13 +1,7 @@
 ---
-layout: single
 title: "Publishing my first research paper"
-author_profile: true
+date: '2022-06-30'
 toc: true
-toc_sticky: true
-feature_image: "/assets/images/"
-canonical_url: "https://jnicolaus.com/my-first-research-paper/"
-header:
-  og_image: "/assets/images/2022-04-17/"
 excerpt: "After a year long review, my first paper on NF-kB transcription factor was finally published in PLoS Genetics."
 ---
 

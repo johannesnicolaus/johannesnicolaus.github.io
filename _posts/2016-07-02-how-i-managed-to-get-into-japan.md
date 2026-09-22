@@ -1,11 +1,6 @@
 ---
 title: How I managed to get into Japan
 date: '2016-07-02T08:07:00.006-07:00'
-author: Johannes Nicolaus Wibisana
-tags: 
-author_profile: true
-modified_time: '2016-07-02T08:42:43.307-07:00'
-layout: single
 excerpt: "So I went to this University fair about 2 years ago and got some info regarding this Osaka University Global 30 program, however I didn't really look further into this program and ended up spending mo..."
 ---
 

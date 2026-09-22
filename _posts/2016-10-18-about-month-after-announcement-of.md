@@ -1,11 +1,6 @@
 ---
-title: 
+title: "Choosing a department at Osaka University"
 date: '2016-10-18T18:59:00.001-07:00'
-author: Johannes Nicolaus Wibisana
-tags: 
-author_profile: true
-modified_time: '2016-10-18T18:59:05.937-07:00'
-layout: single
 excerpt: "About a month after the announcement of passing into the university, I was asked to choose among 4 departments:Department of Biological sciences (School of science),DepartmentofBiotechnology (School o..."
 ---
 

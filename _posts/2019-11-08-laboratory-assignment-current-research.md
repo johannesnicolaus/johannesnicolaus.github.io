@@ -2,11 +2,6 @@
 title: Laboratory assignment, current research, and my first international conference
   presentation
 date: '2019-11-08T02:20:00.003-08:00'
-author: Johannes Nicolaus Wibisana
-tags: 
-author_profile: true
-modified_time: '2019-11-08T02:20:18.471-08:00'
-layout: single
 excerpt: "It’s getting really busy lately, so I haven’t had time to update my blog in a veeeeery long time. To sum up: I am currently a 4thyear student, and I am currently doing my undergraduate thesis research..."
 ---
 

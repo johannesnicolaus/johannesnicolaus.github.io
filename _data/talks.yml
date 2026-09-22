@@ -62,3 +62,61 @@
   title: "Enhancer-mediated transcriptional regulation in Oikopleura dioica"
   venue: "The 45th Annual Meeting of the Molecular Biology Society of Japan"
   location: "Chiba, Japan"
+
+# ---------------- Earlier work (Osaka University, NF-kB project) ----------------
+
+- type: poster
+  scope: international
+  year: 2021
+  date: "November 2021"
+  title: "Imaging and single-cell sequencing analysis of super-enhancer activation mediated by NF-κB in B cells"
+  venue: "Cell Symposia: Biological Assemblies — Phase Transitions and More"
+  location: "Online"
+
+- type: poster
+  scope: international
+  year: 2021
+  date: "May 2021"
+  title: "NF-κB mediated transcriptional regulation in B cells"
+  venue: "CSHL Meeting: Biology of Genomes"
+  location: "Online"
+
+- type: oral
+  scope: international
+  year: 2020
+  date: "February 2020"
+  title: "NF-κB mediated transcriptional regulation in B cells"
+  venue: "International Symposium on Structure and Folding of Disease Related Proteins"
+  location: "Seoul National University, South Korea"
+
+- type: poster
+  scope: international
+  year: 2019
+  date: "November 2019"
+  title: "Multi-dimensional analysis of NF-κB nuclear dynamics"
+  venue: "International Conference on Systems Biology"
+  location: "Okinawa Institute of Science and Technology, Japan"
+
+- type: poster
+  scope: domestic
+  year: 2021
+  date: "November 2021"
+  title: "Imaging and single-cell sequencing analysis of super-enhancer activation mediated by NF-κB in B cells"
+  venue: "The 19th IPR Retreat, Osaka University"
+  location: "Online"
+
+- type: poster
+  scope: domestic
+  year: 2020
+  date: "September 2020"
+  title: "NF-κB mediated transcriptional regulation in B cells"
+  venue: "The 58th Annual Meeting of the Biophysical Society of Japan"
+  location: "Online"
+
+- type: oral
+  scope: domestic
+  year: 2019
+  date: "November 2019"
+  title: "Multi-dimensional analysis of NF-κB nuclear dynamics"
+  venue: "The 18th IPR Retreat, Osaka University"
+  location: "Osaka, Japan"

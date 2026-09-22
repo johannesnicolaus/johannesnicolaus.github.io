@@ -1,12 +1,9 @@
 ---
-layout: single
 title: "Landing a PhD position"
-author_profile: true
+date: '2022-04-17'
 toc: true
-toc_sticky: true
-feature_image: "/assets/images/2022-04-17/oist.jpg"
-canonical_url: "https://jnicolaus.com/road-to-phd/"
 header:
+  teaser: "/assets/images/2022-04-17/oist.jpg"
   og_image: "/assets/images/2022-04-17/oist.jpg"
 excerpt: "My journey to securing a PhD position at Okinawa Institute of Science and Technology after finishing my Master's degree."
 ---

@@ -1,11 +1,10 @@
 ---
-layout: single
+date: '2021-06-12'
 title: "Tutorial: Running RStudio using Docker for smoother collaboration"
-author_profile: true
 toc: true
-toc_sticky: true
-feature_image: "/assets/images/2021-06-12/rstudio-docker.png"
 excerpt: "Guide to setting up RStudio in Docker containers for consistent development environments across teams."
+header:
+  teaser: "/assets/images/2021-06-12/rstudio-docker.png"
 ---
 
 Sometimes, it is hard to replicate the same environment when you are collaborating in a project. Sometimes you might not want to downgrade some of the packages that you got installed in your system to replicate someone else's system. In this case, you might want to use Docker, which can give you an isolated environment to run your applications, in a way, it is similar to conda.

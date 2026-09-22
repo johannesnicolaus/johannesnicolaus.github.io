@@ -1,26 +1,29 @@
 {%- comment -%}
-Renders talks from _data/talks.yml, grouped by year within a chosen type.
+Renders talks from _data/talks.yml, newest first.
+Filter by "scope" (international | domestic) and/or "type" (oral | poster).
+Section headings are emitted as <h3> so they stay out of the table of contents.
 Usage:
-  {% include talk-list.html type="oral"   heading="Oral presentations" %}
-  {% include talk-list.html type="poster" heading="Poster presentations" %}
+  {% include talk-list.html scope="international" heading="International" %}
+  {% include talk-list.html type="oral" heading="Oral presentations" %}
 {%- endcomment -%}
 
-{%- assign entries = site.data.talks | where: "type", include.type -%}
+{%- assign entries = site.data.talks -%}
+{%- if include.scope -%}{%- assign entries = entries | where: "scope", include.scope -%}{%- endif -%}
+{%- if include.type -%}{%- assign entries = entries | where: "type", include.type -%}{%- endif -%}
 {%- if entries and entries.size > 0 -%}
-<h1 id="talks-{{ include.type }}">{{ include.heading }}</h1>
+{%- if include.heading %}<h3 id="talks-{{ include.scope | default: include.type }}">{{ include.heading }}</h3>{% endif %}
 
 {%- assign years = entries | map: "year" | uniq | sort | reverse -%}
-{%- for y in years %}
-<h2 id="talks-{{ include.type }}-{{ y }}">{{ y }}</h2>
-<ol class="talk-list">
-  {%- for t in entries -%}
-    {%- if t.year == y %}
+<ul class="talk-list">
+  {%- for y in years -%}
+    {%- for t in entries -%}
+      {%- if t.year == y %}
   <li>
     {% if t.url %}<a href="{{ t.url }}"><strong>{{ t.title }}</strong></a>{% else %}<strong>{{ t.title }}</strong>{% endif %}.
-    <i>{{ t.venue }}</i>{% if t.location %}, {{ t.location }}{% endif %}{% if t.date %} ({{ t.date }}){% endif %}.
+    <i>{{ t.venue }}</i>{% if t.location %}, {{ t.location }}{% endif %}{% if t.date %}, {{ t.date }}{% endif %}{% if t.type %} ({{ t.type }} presentation){% endif %}.
   </li>
-    {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
   {%- endfor %}
-</ol>
-{%- endfor %}
+</ul>
 {%- endif -%}

@@ -1,11 +1,6 @@
 ---
 title: Why this blog and who am I
 date: '2016-05-15T23:44:00.001-07:00'
-author: Johannes Nicolaus Wibisana
-tags: 
-author_profile: true
-modified_time: '2016-05-15T23:44:09.357-07:00'
-layout: single
 excerpt: "Maybe a little too late to make a blog, but maybe not too late to share stories."
 ---
 

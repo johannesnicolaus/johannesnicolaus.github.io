@@ -1,0 +1,275 @@
+/* ==========================================================================
+   CV-STYLE SECTIONS ON THE FRONT PAGE
+   Education, research experience, honours, teaching, workshops, organizations
+   ========================================================================== */
+
+/* Call-to-action buttons under the page title (CV download, Google Scholar) */
+
+.page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-bottom: 1.5em;
+
+  .btn {
+    margin-bottom: 0;
+  }
+}
+
+/* Shared list used by every data-driven CV section */
+
+.cv-entry-list {
+  margin: 0 0 1.5em;
+  padding: 0;
+  list-style: none;
+
+  > .cv-entry {
+    margin-bottom: 1.25em;
+    padding-left: 1em;
+    border-left: 3px solid var(--global-border-color);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    margin: 0.35em 0 0;
+    padding-left: 1.25em;
+    font-size: $type-size-6;
+
+    li {
+      margin-bottom: 0.2em;
+    }
+  }
+}
+
+.cv-entry__title {
+  display: block;
+  font-family: $sans-serif;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.cv-entry__meta {
+  display: block;
+  margin-top: 0.1em;
+  color: var(--global-text-color-light);
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+}
+
+/* Publication and talk lists */
+
+.publication-list,
+.talk-list {
+  margin-bottom: 1.5em;
+
+  li {
+    margin-bottom: 0.6em;
+  }
+}
+
+/* Contact form */
+
+.contact-form {
+  max-width: 40em;
+
+  label {
+    display: block;
+    margin-bottom: 0.25em;
+    font-family: $sans-serif;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+  }
+}
+
+.contact-form__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   STICKY TABLE OF CONTENTS
+   academicpages ships .sidebar__right but no .sticky variant, so a page with
+   toc_sticky just parked the box at the top of the article and let it scroll
+   away. Making it sticky is only half the job: a right-floated box reserves
+   space at its original position only, so once it sticks the text below runs
+   underneath it. The sibling rules below reserve a matching gutter.
+   ========================================================================== */
+
+$toc-width-narrow: 200px;
+$toc-width-wide: 250px;
+$toc-gutter: 1.5em;
+
+/* academicpages reserves a 2/12 right gutter on every .page. A page with a
+   table of contents puts that space to use instead of leaving it blank. */
+
+.page--toc {
+  @include breakpoint($large) {
+    padding-right: 0;
+  }
+}
+
+.sidebar__right.sticky {
+  @include breakpoint($large) {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2em;
+    float: right;
+    width: $toc-width-narrow;
+    margin-left: $toc-gutter;
+    max-height: calc(100vh - 4em);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    /* academicpages floats these full-width via susy's full(); a 100%-wide
+       left float cannot sit beside the right-floated TOC, so it drops below
+       it and leaves a tall blank band. Take them out of the float flow and
+       reserve the gutter with padding instead. */
+
+    ~ .page__content,
+    ~ .page__meta,
+    ~ .page__share,
+    ~ .post-pagination,
+    ~ footer {
+      float: none;
+      clear: none;
+      width: auto;
+      padding-right: $toc-width-narrow + 24px;
+    }
+  }
+
+  @include breakpoint($x-large) {
+    width: $toc-width-wide;
+
+    ~ .page__content,
+    ~ .page__meta,
+    ~ .page__share,
+    ~ .post-pagination,
+    ~ footer {
+      padding-right: $toc-width-wide + 24px;
+    }
+  }
+}
+
+/* The call-to-action row is a flex container, which would otherwise clear the
+   floated TOC and leave a tall blank band under the page title. */
+
+.page-actions {
+  clear: none;
+}
+
+/* ==========================================================================
+   AUTHOR PROFILE SIDEBAR
+   ========================================================================== */
+
+/* The theme sets white-space: nowrap on these rows, so a long employer name
+   (or any long link label) ran off the edge of the sidebar. Let them wrap,
+   with a hanging indent so continuation lines line up with the text rather
+   than sliding back under the icon. */
+
+.author__urls {
+  li {
+    white-space: normal;
+    padding-left: 2.25em;
+    text-indent: -2.25em;
+    line-height: 1.35;
+  }
+
+  /* text-indent is inherited, and these icons are inline-block, so without
+     this the negative indent drags each glyph out of its own box. */
+  li i {
+    text-indent: 0;
+  }
+
+  li + li {
+    margin-top: 0.15em;
+  }
+
+  a {
+    display: inline;
+  }
+}
+
+/* ==========================================================================
+   MASTHEAD
+   ========================================================================== */
+
+/* Site title on the left, menu flush right. The title sits outside
+   .greedy-nav (see _includes/masthead.html), so the nav measures only the
+   space left over and its collapse maths stays correct. */
+
+.masthead__inner-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.masthead__title {
+  flex: 0 1 auto;
+  min-width: 0;
+  font-family: $sans-serif-narrow;
+  font-weight: bold;
+
+  a {
+    display: block;
+    padding: 0.5rem 0;
+    color: var(--global-masthead-link-color);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-masthead-link-color-hover);
+    }
+  }
+
+  &.selected a {
+    border-bottom: 4px solid var(--global-border-color);
+  }
+}
+
+.masthead__menu {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.greedy-nav {
+  min-width: 0;
+
+  .visible-links {
+    /* shrink-to-fit, pushed to the right edge of whatever space is left */
+    margin-left: auto;
+
+    /* the theme bolded the first item because it used to be the site title */
+    li:first-child {
+      font-weight: inherit;
+
+      a {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   STICKY SIDEBAR OFFSET
+   The masthead is position: fixed, so anything sticking to the top of the
+   viewport has to clear it or it gets cut off on scroll.
+   ========================================================================== */
+
+$masthead-height: 65px;
+
+.sidebar__right.sticky {
+  @include breakpoint($large) {
+    top: $masthead-height + 18px;
+    max-height: calc(100vh - #{$masthead-height} - 54px);
+  }
+}

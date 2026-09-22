@@ -1,11 +1,6 @@
 ---
 title: The Next Step to 阪大
 date: '2016-08-19T06:39:00.000-07:00'
-author: Johannes Nicolaus Wibisana
-tags: 
-author_profile: true
-modified_time: '2016-08-19T20:36:21.994-07:00'
-layout: single
 excerpt: "So, I'm gonna save the language school post for later and the Osaka University post for today."
 ---
 

@@ -1,14 +1,12 @@
 ---
-layout: single
 published: false
+date: '2025-05-01'
 title: "Tutorial: ONT basecalling on R10 ONT data"
-author_profile: true
 toc: true
-toc_sticky: true
-feature_image: "/assets/images/2023-11-07/Logo.svg"
 excerpt: "Guide for performing basecalling on Oxford Nanopore Technologies R10 flow cell data using Dorado."
+header:
+  teaser: "/assets/images/2023-11-07/Logo.svg"
 ---
-
 
 I have been working on many ONT data and is super excited for the new R10 flow cells. With the new R10 flow cells, Dorado has models for 6ma calling for this flow cell.
 

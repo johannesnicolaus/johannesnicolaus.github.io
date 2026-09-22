@@ -1,0 +1,13 @@
+# Workshops and courses attended, newest first.
+# Each entry:
+#   title: workshop / course name
+#   location: city, country
+#   date: human-readable date
+
+- title: "EMBO Practical Course: Single-cell omics — deeper to genomics"
+  location: "Heidelberg, Germany"
+  date: "December 2022"
+
+- title: "第30回細胞生物学ワークショップ (The 30th Cell Biology Workshop)"
+  location: "Hyogo, Japan"
+  date: "July 2020"

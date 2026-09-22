@@ -1,12 +1,11 @@
 ---
-layout: single
 published: true
+date: '2025-05-01'
 title: "Tutorial: Genome assembly and scaffolding of small eukaryotic genomes"
-author_profile: true
 toc: true
-toc_sticky: true
-feature_image: "/assets/images/2025-05-01/flowchart.png"
 excerpt: "Learn genome assembly and scaffolding techniques for small eukaryotic genomes using NOVOloci and hifiasm."
+header:
+  teaser: "/assets/images/2025-05-01/flowchart.png"
 ---
 
 ## Introduction

@@ -1,0 +1,104 @@
+name: Build and deploy site
+
+on:
+  push:
+    branches: [master]
+  # Lets the Awesome-CV repo kick off a rebuild when the CV changes.
+  # See .github/workflows/README.md for how to wire that up.
+  repository_dispatch:
+    types: [cv-updated]
+  # Picks up CV changes even if the dispatch is not set up.
+  schedule:
+    - cron: '0 3 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never run two deploys at once; let a newer push win.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-cv:
+    name: Compile CV
+    runs-on: ubuntu-latest
+    container: texlive/texlive:latest
+    steps:
+      - name: Check out the site and the Awesome-CV submodule
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Trust the checkout inside the container
+        run: git config --global --add safe.directory '*'
+
+      - name: Move the submodule to the tip of the CV repo
+        run: git submodule update --remote --recursive Awesome-CV
+
+      - name: Compile resume.tex with XeLaTeX
+        # examples/resume.tex is the real CV; examples/cv.tex in this repo is a
+        # placeholder cover letter, so "make" would build more than we need.
+        working-directory: Awesome-CV
+        run: |
+          xelatex -interaction=nonstopmode -halt-on-error \
+            -output-directory=examples examples/resume.tex
+
+      - name: Check the PDF came out
+        run: |
+          test -s Awesome-CV/examples/resume.pdf
+          echo "CV built: $(du -h Awesome-CV/examples/resume.pdf | cut -f1)"
+
+      - name: Hand it to the site build
+        run: |
+          mkdir -p cv-out
+          cp Awesome-CV/examples/resume.pdf cv-out/cv.pdf
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cv-pdf
+          path: cv-out/cv.pdf
+          retention-days: 1
+
+  build-site:
+    name: Build site
+    runs-on: ubuntu-latest
+    needs: build-cv
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Replace the committed CV with the freshly built one
+        uses: actions/download-artifact@v4
+        with:
+          name: cv-pdf
+          path: files
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - uses: actions/configure-pages@v5
+
+      - name: Build
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: build-site
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

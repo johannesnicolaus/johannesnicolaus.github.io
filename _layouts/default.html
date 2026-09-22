@@ -18,12 +18,17 @@ layout: compress
 
     {{ content }}
 
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
+    {%- comment -%}
+      The site footer is intentionally not rendered. To bring it back, restore
+      the block below; _includes/footer.html is still in the repo.
+
+      <div class="page__footer">
+        <footer>
+          {% include footer/custom.html %}
+          {% include footer.html %}
+        </footer>
+      </div>
+    {%- endcomment -%}
 
     {% include scripts.html %}
 

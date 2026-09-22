@@ -1,11 +1,6 @@
 ---
 title: '2nd Semester in CBCMP: Circles and Clubs'
 date: '2017-08-18T23:33:00.000-07:00'
-author: Johannes Nicolaus Wibisana
-tags: 
-author_profile: true
-modified_time: '2017-08-18T23:33:31.607-07:00'
-layout: single
 excerpt: "I haven't updated this blog in a while lol... A lot of stuff happened in the 2nd semester honestly. Firstly I joined circles. For those of you who don't know what a circle is, it basically is a club w..."
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: '2nd Semester: Labs'
 date: '2017-08-20T23:25:00.000-07:00'
-author: Johannes Nicolaus Wibisana
-tags: 
-author_profile: true
-modified_time: '2017-08-20T23:25:10.707-07:00'
-layout: single
 excerpt: "Hello there, different from 1st semester, we have labs on our 2nd semester. A rather good thing knowing that we almost never had any lab experience during the course of first semester"
 ---
 

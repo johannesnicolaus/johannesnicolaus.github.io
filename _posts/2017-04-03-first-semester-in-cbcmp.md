@@ -1,11 +1,6 @@
 ---
 title: First Semester in the CBCMP
 date: '2017-04-03T08:34:00.004-07:00'
-author: Johannes Nicolaus Wibisana
-tags: 
-author_profile: true
-modified_time: '2017-04-03T08:34:59.887-07:00'
-layout: single
 excerpt: "Haven't posted in a while, first sem was really hectic... Let me sum up my first sem in the CBCMP then.."
 ---
 

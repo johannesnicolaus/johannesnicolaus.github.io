@@ -1,13 +1,10 @@
 ---
-layout: single
 published: true
+date: '2023-12-07'
 title: "Scuba diving in Okinawa Part 1"
-author_profile: true
 toc: true
-toc_sticky: true
-feature_image: "/assets/images/2023-12-07/turtle.jpg"
-canonical_url: "https://jnicolaus.com/2023-12-07-diving-in-okinawa-part1"
 header:
+  teaser: "/assets/images/2023-12-07/turtle.jpg"
   og_image: "/assets/images/2023-12-07/turtle.jpg"
 excerpt: "Sharing my passion for scuba diving and marine life in the pristine waters around Okinawa."
 ---

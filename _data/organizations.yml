@@ -1,0 +1,26 @@
+# Organizational and leadership experience, newest first.
+# Each entry:
+#   role: position held
+#   venue: organization
+#   date: human-readable range
+#   items: (optional) list of bullet points
+
+- role: "Secretary General"
+  venue: "Indonesian Student Association in Japan (PPI Jepang)"
+  date: "2020 – 2021"
+
+- role: "Secretary General"
+  venue: "Indonesian Student Association in Japan (PPI Jepang)"
+  date: "2019 – 2020"
+
+- role: "President"
+  venue: "Indonesian Student Association in Osaka-Nara (PPI Osaka-Nara)"
+  date: "2018 – 2019"
+  items:
+    - "In charge of ASSIGN, the annual symposium held by the Indonesian Student Association in Japan"
+
+- role: "Head of academic division"
+  venue: "Indonesian Student Association in Osaka-Nara (PPI Osaka-Nara)"
+  date: "2017 – 2018"
+  items:
+    - "Organized academic events such as group study sessions and career seminars"

@@ -1,11 +1,10 @@
 ---
-layout: single
+date: '2022-04-23'
 title: "Tutorial: Docker and singularity image containing R and Renv for package version control"
-author_profile: true
 toc: true
-toc_sticky: true
-feature_image: "/assets/images/2022-04-30/renv-singularity-docker.png"
 excerpt: "Learn how to create reproducible R environments using Renv with Docker and Singularity containers."
+header:
+  teaser: "/assets/images/2022-04-30/renv-singularity-docker.png"
 ---
 
 Renv is a package manager for R, by using Renv, it is possible to control the exact versions of R packages used within a project. In this project, I wanted to create a singularity image where I can control the R version, and have fixed package dependencies versions. Note that using the R command `install.packages()` will install the newest version of a certain package, and thus for reproducibility purposes I'm using Renv. The ultimate goal is to have a singularity image to be run on an HPC cluster, which contains a custom R 

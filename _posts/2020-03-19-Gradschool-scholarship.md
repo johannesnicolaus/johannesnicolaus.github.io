@@ -1,11 +1,10 @@
 ---
-layout: single
 title: Getting into Japanese graduate school and getting a "full" scholarship
-author_profile: true
+date: '2020-03-19'
 toc: true
-toc_sticky: true
-feature_image: "/assets/images/2020-03-19/oiocha.jpg"
 excerpt: "My journey into Japanese graduate school and securing a scholarship to fund my studies."
+header:
+  teaser: "/assets/images/2020-03-19/oiocha.jpg"
 ---
 
 Hi there, so finally I have almost graduated from my undergraduate program which was in the G30 program. Now I am continuing to grad school in the same university, however I had to take an entrance exam and enroll in a different program. 

@@ -1,0 +1,76 @@
+# Research experience, newest first.
+# Each entry:
+#   role: job title
+#   venue: laboratory / unit / institution
+#   location: city, country
+#   date: human-readable range
+#   items: list of bullet points (markdown allowed)
+
+- role: "PhD student"
+  venue: "Genomics and Regulatory Systems Unit (PI: Nicholas Luscombe), Okinawa Institute of Science and Technology"
+  location: "Okinawa, Japan"
+  date: "March 2022 – present"
+  items:
+    - "Project: a genomic investigation of evolution and gene regulation in *Oikopleura dioica*"
+    - "Analysis of genomic, transcriptomic and epigenomic data of *O. dioica*"
+    - "Improved genome annotation of *O. dioica*"
+    - "Developed a genome browser for *O. dioica*: [oikobrowser.jnicolaus.com](https://oikobrowser.jnicolaus.com)"
+    - "Side project: *O. dioica* pangenomics"
+
+- role: "PhD rotation student"
+  venue: "Macroevolution Unit (PI: Lauren Sallan), Okinawa Institute of Science and Technology"
+  location: "Okinawa, Japan"
+  date: "2023"
+  items:
+    - "Project: dental microwear analysis in the fish–tetrapod transition"
+    - "Established a fish facility for *Polypterus*"
+    - "Performed dental molding of fossils and scanning using a confocal microscope"
+
+- role: "PhD rotation student"
+  venue: "Marine Eco-Evo-Devo Unit (PI: Vincent Laudet), Okinawa Institute of Science and Technology"
+  location: "Okinawa, Japan"
+  date: "2022"
+  items:
+    - "Project: metabolic gene duplication in clownfish"
+
+- role: "Undergraduate and master's student"
+  venue: "Laboratory for Cell Systems (PI: Mariko Okada), Osaka University"
+  location: "Osaka, Japan"
+  date: "February 2019 – March 2022"
+  items:
+    - "Project: NF-κB mediated transcriptional regulation in B cells"
+    - "Quantitative imaging analysis of NF-κB nuclear translocation using confocal microscopy and ImageJ"
+    - "Single-cell RNA-seq and single-cell ATAC-seq analysis relating cis-regulatory elements to gene expression"
+    - "In charge of training visiting researchers on RNA-seq analysis"
+
+- role: "Research intern"
+  venue: "Laboratory of Cellular Life Science (PI: Naotada Ishihara), Osaka University"
+  location: "Osaka, Japan"
+  date: "September 2018 – February 2019"
+  items:
+    - "Project: quantification of mitochondrial morphology using ImageJ"
+    - "Live imaging of mitochondria in cell culture"
+
+- role: "Research assistant"
+  venue: "Laboratory of Science and Innovation for Pain, Osaka University"
+  location: "Osaka, Japan"
+  date: "April 2018 – February 2019"
+  items:
+    - "Mouse genotyping, RNA extraction, ELISA and MRI image analysis"
+
+- role: "Associate project leader, Osaka University BIOMOD 2017–2018"
+  venue: "Bio Medical Wet Robotics Laboratory (PI: Keisuke Morishima), Osaka University"
+  location: "Osaka, Japan"
+  date: "2017 – 2018"
+  items:
+    - "DNA origami design, modelling and experiments"
+    - "FRET observation using a confocal microscope for a live-cell tension sensor project"
+    - "Team website and animation production"
+    - "Bronze award in both [BIOMOD](http://biomod.net) 2017 and 2018"
+
+- role: "Undergraduate researcher"
+  venue: "Department of Biotechnology, Pelita Harapan University"
+  location: "Tangerang, Indonesia"
+  date: "2016"
+  items:
+    - "Antibiotic susceptibility evaluation of *Bacillus amyloliquefaciens* isolated from local pig gastrointestinal tract as a potential probiotic candidate"

@@ -1,33 +1,28 @@
-# The following is the order of the links in the header of the website.
+# The order of the links in the header of the website.
 #
-# Changing the order here will adjust the order and you can also add additional
-# links. Removing a link prevents it from showing in the header, but does not
-# prevent it from being included in the site.
+# Changing the order here adjusts the order in the masthead. Removing a link
+# prevents it from showing in the header, but does not remove the page itself.
 #
-# NOTE that only one of the CV options should be selected, the first is for the
-#      Markdown formatted page while the second is generated using JSON.
+# The site title on the left already links to the front page, so there is no
+# separate "About" item here. Publications, talks, teaching and the CV all live
+# on the front page, reachable from its table of contents.
+#
+# Set "new_tab: true" on an item to open it in a new browser tab.
 
 main:
-  - title: "Publications"
-    url: /publications/
+  - title: "Blog"
+    url: /blog/
 
-  - title: "Talks"
-    url: /talks/    
-
-  - title: "Teaching"
-    url: /teaching/    
-    
-  - title: "Portfolio"
-    url: /portfolio/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
-    
-  - title: "CV"
-    url: /cv/
-    
-  # - title: "CV"
-  #   url: /cv-json/
-    
   - title: "Tutorials"
     url: /tutorials/
+
+  - title: "CV"
+    url: /files/cv.pdf
+    new_tab: true
+
+  - title: "Contact"
+    url: /contact/
+
+  # Re-enable once there is portfolio content (see _pages/portfolio.html)
+  # - title: "Portfolio"
+  #   url: /portfolio/

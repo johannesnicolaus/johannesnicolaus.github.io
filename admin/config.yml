@@ -3,20 +3,404 @@
 backend:
   name: github
   repo: johannesnicolaus/personal_website_2
-  # Recommended: set the branch you want the CMS to commit to
-  branch: main
-  # Allowed auth methods: oauth and/or token. Keep both enabled for flexibility.
+  branch: master
   auth_methods: [oauth, token]
 
-media_folder: /images
-public_folder: /images
+# Where uploads are written in the repo, and how they are referenced in content.
+media_folder: assets/images
+public_folder: /assets/images
+
+# Jekyll is unhappy with non-ASCII and very long filenames, so keep slugs tame.
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
 
 collections:
+  # ---------------------------------------------------------------- blog -----
   - name: posts
-    label: Posts
-    label_singular: Post
+    label: Blog posts
+    label_singular: Blog post
+    description: Personal blog posts, published at /<slug>/.
     folder: _posts
+    create: true
+    icon: article
+    extension: md
+    format: yaml-frontmatter
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: [date, title]
+    summary: "{{title}}"
+    preview_path: "{{slug}}"
     fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD", type: date, required: true }
-      - { label: Body, name: body, widget: markdown }
+      - { name: title, label: Title, widget: string }
+      - name: date
+        label: Date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+      - name: excerpt
+        label: Excerpt
+        widget: text
+        required: false
+        hint: One or two sentences shown in the blog listing and in link previews.
+      - name: published
+        label: Published
+        widget: boolean
+        default: true
+        hint: Untick to keep the post out of the built site.
+      - name: toc
+        label: Show table of contents
+        widget: boolean
+        default: false
+        required: false
+      - name: header
+        label: Header images
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { name: teaser, label: Teaser image, widget: image, required: false }
+          - { name: og_image, label: Social share image, widget: image, required: false }
+      - name: tags
+        label: Tags
+        widget: list
+        required: false
+        field: { name: tag, label: Tag, widget: string }
+      - name: redirect_from
+        label: Redirect from
+        widget: list
+        required: false
+        hint: Old URLs that should redirect to this post.
+        field: { name: url, label: Old URL, widget: string }
+      - { name: body, label: Body, widget: markdown }
+
+  # ----------------------------------------------------------- tutorials -----
+  - name: tutorials
+    label: Tutorials
+    label_singular: Tutorial
+    description: Walkthroughs and notes, published at /tutorials/<slug>/.
+    folder: _tutorials
+    create: true
+    icon: school
+    extension: md
+    format: yaml-frontmatter
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: [date, title]
+    summary: "{{title}}"
+    preview_path: "tutorials/{{slug}}"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - name: date
+        label: Date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+      - name: excerpt
+        label: Excerpt
+        widget: text
+        required: false
+        hint: One or two sentences shown in the tutorials listing.
+      - name: published
+        label: Published
+        widget: boolean
+        default: true
+        hint: Untick to keep the tutorial as a draft.
+      - name: toc
+        label: Show table of contents
+        widget: boolean
+        default: true
+        required: false
+      - name: header
+        label: Header images
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { name: teaser, label: Teaser image, widget: image, required: false }
+          - { name: og_image, label: Social share image, widget: image, required: false }
+      - name: redirect_from
+        label: Redirect from
+        widget: list
+        required: false
+        hint: Old URLs that should redirect to this tutorial.
+        field: { name: url, label: Old URL, widget: string }
+      - { name: body, label: Body, widget: markdown }
+
+  # ------------------------------------------------------------- pages ------
+  - name: pages
+    label: Pages
+    description: >-
+      Standalone pages. The front page intro lives here; the lists below it come
+      from "Front page sections".
+    icon: description
+    files:
+      - name: about
+        label: Front page
+        file: _pages/about.md
+        icon: home
+        preview_path: ""
+        fields:
+          - { name: title, label: Heading, widget: string }
+          - name: toc
+            label: Show table of contents
+            widget: boolean
+            default: true
+          - { name: toc_label, label: Table of contents heading, widget: string, required: false }
+          - { name: permalink, label: Permalink, widget: hidden, default: / }
+          - { name: author_profile, label: Author profile, widget: hidden, default: true }
+          - { name: toc_sticky, label: Sticky table of contents, widget: hidden, default: true }
+          - name: redirect_from
+            label: Redirect from
+            widget: list
+            required: false
+            field: { name: url, label: Old URL, widget: string }
+          - name: body
+            label: Page body
+            widget: markdown
+            hint: >-
+              The intro text plus the include lines that pull in each list.
+              Leave the include lines alone unless you want to move or drop a
+              whole section.
+
+      - name: contact
+        label: Contact page
+        file: _pages/contact.md
+        icon: mail
+        preview_path: "contact"
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: permalink, label: Permalink, widget: hidden, default: /contact/ }
+          - { name: author_profile, label: Author profile, widget: hidden, default: true }
+          - { name: layout, label: Layout, widget: hidden, default: single }
+          - { name: body, label: Page body, widget: markdown }
+
+  # ------------------------------------------------- front page sections -----
+  - name: sections
+    label: Front page sections
+    description: >-
+      The structured lists rendered on the front page. These are also the source
+      for the publication and presentation lists.
+    icon: list_alt
+    files:
+      - name: publications
+        label: Publications
+        file: _data/publications.yml
+        icon: menu_book
+        fields:
+          - name: publications
+            label: Publications
+            label_singular: Publication
+            widget: list
+            root: true
+            summary: "{{fields.year}} - {{fields.title}}"
+            fields:
+              - name: category
+                label: Category
+                widget: select
+                options:
+                  - { label: Research article, value: research }
+                  - { label: Review article, value: review }
+                  - { label: Book chapter, value: chapter }
+              - { name: year, label: Year, widget: number, value_type: int }
+              - name: authors
+                label: Authors
+                widget: string
+                hint: >-
+                  Wrap your own name in double asterisks for bold. Use a
+                  backslash before an asterisk for a corresponding-author mark.
+              - { name: title, label: Title, widget: string }
+              - { name: venue, label: Journal or book, widget: string }
+              - name: doi
+                label: DOI
+                widget: string
+                required: false
+                hint: "Just the DOI, e.g. 10.1371/journal.pgen.1010235"
+              - name: url
+                label: Link
+                widget: string
+                required: false
+                hint: Overrides the DOI link when set.
+
+      - name: talks
+        label: Conference presentations
+        file: _data/talks.yml
+        icon: co_present
+        fields:
+          - name: talks
+            label: Presentations
+            label_singular: Presentation
+            widget: list
+            root: true
+            summary: "{{fields.year}} - {{fields.title}}"
+            fields:
+              - name: type
+                label: Type
+                widget: select
+                options:
+                  - { label: Oral, value: oral }
+                  - { label: Poster, value: poster }
+              - name: scope
+                label: Scope
+                widget: select
+                options:
+                  - { label: International, value: international }
+                  - { label: Domestic, value: domestic }
+              - { name: year, label: Year, widget: number, value_type: int }
+              - name: date
+                label: Date
+                widget: string
+                required: false
+                hint: "e.g. August 2025"
+              - { name: title, label: Title, widget: string }
+              - { name: venue, label: Meeting, widget: string }
+              - { name: location, label: Location, widget: string, required: false }
+              - { name: url, label: Link, widget: string, required: false }
+
+      - name: education
+        label: Education
+        file: _data/education.yml
+        icon: school
+        fields:
+          - name: education
+            label: Degrees
+            label_singular: Degree
+            widget: list
+            root: true
+            summary: "{{fields.degree}} - {{fields.institution}}"
+            fields:
+              - { name: degree, label: Degree, widget: string }
+              - { name: institution, label: Institution, widget: string }
+              - { name: location, label: Location, widget: string, required: false }
+              - { name: date, label: Dates, widget: string, required: false }
+              - name: items
+                label: Details
+                widget: list
+                required: false
+                field: { name: item, label: Detail, widget: string }
+
+      - name: experience
+        label: Research experience
+        file: _data/experience.yml
+        icon: science
+        fields:
+          - name: experience
+            label: Positions
+            label_singular: Position
+            widget: list
+            root: true
+            summary: "{{fields.role}} - {{fields.venue}}"
+            fields:
+              - { name: role, label: Role, widget: string }
+              - { name: venue, label: Laboratory or institution, widget: string }
+              - { name: location, label: Location, widget: string, required: false }
+              - { name: date, label: Dates, widget: string, required: false }
+              - name: items
+                label: Details
+                widget: list
+                required: false
+                field: { name: item, label: Detail, widget: string }
+
+      - name: honors
+        label: Honours and awards
+        file: _data/honors.yml
+        icon: trophy
+        fields:
+          - name: honors
+            label: Awards
+            label_singular: Award
+            widget: list
+            root: true
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: Award, widget: string }
+              - { name: event, label: Event, widget: string, required: false }
+              - { name: location, label: Location, widget: string, required: false }
+              - { name: date, label: Date, widget: string, required: false }
+
+      - name: teaching
+        label: Teaching and training
+        file: _data/teaching.yml
+        icon: groups
+        fields:
+          - name: teaching
+            label: Entries
+            label_singular: Entry
+            widget: list
+            root: true
+            summary: "{{fields.title}}"
+            fields:
+              - { name: year, label: Year, widget: number, value_type: int }
+              - { name: date, label: Dates, widget: string, required: false }
+              - { name: role, label: Role, widget: string, required: false }
+              - { name: title, label: Title, widget: string }
+              - { name: venue, label: Institution, widget: string }
+              - { name: location, label: Location, widget: string, required: false }
+              - name: items
+                label: Details
+                widget: list
+                required: false
+                hint: Optional bullet points, the same as under research experience.
+                field: { name: item, label: Detail, widget: string }
+
+      - name: workshops
+        label: Workshops attended
+        file: _data/workshops.yml
+        icon: event
+        fields:
+          - name: workshops
+            label: Workshops
+            label_singular: Workshop
+            widget: list
+            root: true
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: Workshop, widget: string }
+              - { name: location, label: Location, widget: string, required: false }
+              - { name: date, label: Date, widget: string, required: false }
+
+      - name: organizations
+        label: Organizational experience
+        file: _data/organizations.yml
+        icon: diversity_3
+        fields:
+          - name: organizations
+            label: Roles
+            label_singular: Role
+            widget: list
+            root: true
+            summary: "{{fields.role}} - {{fields.venue}}"
+            fields:
+              - { name: role, label: Role, widget: string }
+              - { name: venue, label: Organization, widget: string }
+              - { name: date, label: Dates, widget: string, required: false }
+              - name: items
+                label: Details
+                widget: list
+                required: false
+                field: { name: item, label: Detail, widget: string }
+
+  # ---------------------------------------------------------- navigation -----
+  - name: settings
+    label: Site settings
+    icon: settings
+    files:
+      - name: navigation
+        label: Navigation menu
+        file: _data/navigation.yml
+        icon: menu
+        fields:
+          - name: main
+            label: Menu items
+            label_singular: Menu item
+            widget: list
+            summary: "{{fields.title}} - {{fields.url}}"
+            fields:
+              - { name: title, label: Label, widget: string }
+              - { name: url, label: URL, widget: string }
+              - name: new_tab
+                label: Open in a new tab
+                widget: boolean
+                required: false
+                default: false

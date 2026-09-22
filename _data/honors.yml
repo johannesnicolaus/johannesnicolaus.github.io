@@ -1,0 +1,29 @@
+# Honours and awards, newest first.
+# Each entry:
+#   title: the award or scholarship
+#   event: (optional) meeting or programme it was awarded at
+#   location: (optional)
+#   date: human-readable date or range
+
+- title: "Poster presentation award"
+  event: "The 58th Annual Meeting of the Biophysical Society of Japan"
+  location: "Japan"
+  date: "September 2020"
+
+- title: "Honjo International Scholarship Foundation Scholarship"
+  location: "Japan"
+  date: "April 2020 – March 2022"
+
+- title: "Bronze award"
+  event: "BIOMOD 2018 Molecular Design Competition"
+  location: "USA"
+  date: "2018"
+
+- title: "Bronze award"
+  event: "BIOMOD 2017 Molecular Design Competition"
+  location: "USA"
+  date: "2017"
+
+- title: "Monbukagakusho (MEXT) Scholarship"
+  location: "Japan"
+  date: "September 2016 – March 2020"

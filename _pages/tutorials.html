@@ -3,9 +3,15 @@ layout: archive
 title: "Tutorials"
 permalink: /tutorials/
 author_profile: true
+excerpt: true
+redirect_from:
+  - /tutorials-old/
 ---
 
 {% include base_path %}
+
+<p>Notes and walkthroughs I have written up, mostly on reproducible workflows,
+cloud and HPC setups, and genomics analysis.</p>
 
 {% assign tutorials = site.tutorials | sort: "date" | reverse %}
 {% for post in tutorials %}

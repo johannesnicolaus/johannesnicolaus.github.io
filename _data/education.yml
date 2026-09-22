@@ -1,0 +1,36 @@
+# Education entries, newest first.
+# Each entry:
+#   degree: e.g. "Doctor of Philosophy"
+#   institution: name of the university
+#   location: city, country
+#   date: human-readable range, e.g. "April 2022 - present"
+#   items: list of bullet points (markdown allowed)
+
+- degree: "Doctor of Philosophy"
+  institution: "Okinawa Institute of Science and Technology Graduate University"
+  location: "Okinawa, Japan"
+  date: "April 2022 – present"
+  items:
+    - "Unit: [Genomics and Regulatory Systems Unit](https://groups.oist.jp/grsu) (PI: Nicholas Luscombe)"
+    - "PhD project: gene regulation of the scrambled genome of *Oikopleura dioica*"
+    - "Rotation: dental microwear analysis in the fish–tetrapod transition, [Macroevolution Unit](https://groups.oist.jp/mmu) (PI: Lauren Sallan)"
+    - "Rotation: metabolic gene duplication in Pomacentridae, [Marine Eco-Evo-Devo Unit](https://groups.oist.jp/meedu) (PI: Vincent Laudet)"
+
+- degree: "Master of Science, Biological Sciences"
+  institution: "Graduate School of Science, Osaka University"
+  location: "Osaka, Japan"
+  date: "April 2020 – March 2022"
+  items:
+    - "Laboratory: [Laboratory of Cell Systems](http://www.protein.osaka-u.ac.jp/cell_systems/) (PI: Mariko Okada)"
+    - "Project: NF-κB mediated transcriptional regulation in B cells — live fluorescence imaging and multi-omics analysis"
+    - "Funding: [Honjo International Scholarship Foundation](https://www.hisf.or.jp/) Scholarship"
+
+- degree: "Bachelor of Science, Biological Sciences"
+  institution: "School of Science, Osaka University"
+  location: "Osaka, Japan"
+  date: "October 2016 – March 2020 (early graduation)"
+  items:
+    - "Major: Biological Sciences (G30 CBCMP programme)"
+    - "Laboratory: [Laboratory of Cell Systems](http://www.protein.osaka-u.ac.jp/cell_systems/) (PI: Mariko Okada)"
+    - "Project: NF-κB mediated transcriptional regulation in B cells — live fluorescence imaging and multi-omics analysis"
+    - "Funding: Monbukagakusho (MEXT) Scholarship"

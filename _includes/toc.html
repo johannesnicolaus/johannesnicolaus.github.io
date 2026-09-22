@@ -1,0 +1,49 @@
+{%- comment -%}
+Builds a table of contents from the rendered page HTML.
+
+The previous version of this include used kramdown's "{:toc}" marker, which only
+works when the include sits inside markdown content. Because the include is
+called from _layouts/single.html (plain HTML, never run through kramdown) that
+marker was emitted verbatim and the sidebar rendered empty. This version reads
+the already-rendered HTML instead, so it works from a layout.
+
+Usage:
+  {% include toc.html html=content %}
+  {% include toc.html html=content h_min=2 h_max=3 title="On this page" %}
+{%- endcomment -%}
+
+{%- assign h_min = include.h_min | default: 2 -%}
+{%- assign h_max = include.h_max | default: 3 -%}
+
+{%- capture toc_items -%}
+  {%- assign nodes = include.html | split: '<h' -%}
+  {%- for node in nodes -%}
+    {%- if forloop.first -%}{%- continue -%}{%- endif -%}
+    {%- assign level = node | slice: 0, 1 | plus: 0 -%}
+    {%- if level < h_min or level > h_max -%}{%- continue -%}{%- endif -%}
+    {%- assign open_tag = node | split: '>' | first -%}
+    {%- unless open_tag contains 'id="' -%}{%- continue -%}{%- endunless -%}
+    {%- assign anchor = open_tag | split: 'id="' | last | split: '"' | first -%}
+    {%- assign inner = node | split: '>' | shift | join: '>' | split: '</h' | first -%}
+    {%- assign label = inner | strip_html | strip | escape -%}
+    {%- if label == '' -%}{%- continue -%}{%- endif -%}
+    <li class="toc__level-{{ level }}"><a href="#{{ anchor }}">{{ label }}</a></li>
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- assign toc_items = toc_items | strip -%}
+{%- if toc_items != '' -%}
+<aside class="sidebar__right{% if page.toc_sticky %} sticky{% endif %}">
+  <nav class="toc">
+    <header>
+      <h4 class="nav__title">
+        <i class="fas fa-{{ include.icon | default: 'file-alt' }}"></i>
+        {{ include.title | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}
+      </h4>
+    </header>
+    <ul class="toc__menu">
+      {{ toc_items }}
+    </ul>
+  </nav>
+</aside>
+{%- endif -%}

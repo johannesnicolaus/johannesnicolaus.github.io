@@ -1,11 +1,6 @@
 ---
 title: Reaching Osaka University
 date: '2017-03-22T02:59:00.000-07:00'
-author: Johannes Nicolaus Wibisana
-tags: 
-author_profile: true
-modified_time: '2017-03-22T02:59:11.703-07:00'
-layout: single
 excerpt: "Usually it takes about some 7-8 hours to get from Indonesia to Japan. However, MEXT somehow managed to book a ticket with a layover at Denpasar (Bali) and so I had to spend a total of around 14 hours ..."
 ---
 

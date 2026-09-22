@@ -1,0 +1,16 @@
+{%- comment -%}
+Renders workshops attended from _data/workshops.yml.
+Usage: {% include workshop-list.html %}
+{%- endcomment -%}
+
+{%- assign entries = site.data.workshops -%}
+{%- if entries and entries.size > 0 -%}
+<ul class="cv-entry-list">
+  {%- for e in entries %}
+  <li class="cv-entry">
+    <span class="cv-entry__title">{{ e.title }}</span>
+    <span class="cv-entry__meta">{% if e.location %}{{ e.location }}{% if e.date %} &middot; {% endif %}{% endif %}{{ e.date }}</span>
+  </li>
+  {%- endfor %}
+</ul>
+{%- endif -%}

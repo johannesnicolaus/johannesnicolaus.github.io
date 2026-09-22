@@ -1,0 +1,25 @@
+{%- comment -%}
+Renders role-based entries from a data file (research experience, organizations).
+Usage:
+  {% include experience-list.html data=site.data.experience %}
+  {% include experience-list.html data=site.data.organizations %}
+{%- endcomment -%}
+
+{%- assign entries = include.data -%}
+{%- if entries and entries.size > 0 -%}
+<ul class="cv-entry-list">
+  {%- for e in entries %}
+  <li class="cv-entry">
+    <span class="cv-entry__title">{{ e.role }}</span>
+    <span class="cv-entry__meta">{{ e.venue }}{% if e.location %} &middot; {{ e.location }}{% endif %}{% if e.date %} &middot; {{ e.date }}{% endif %}</span>
+    {%- if e.items and e.items.size > 0 %}
+    <ul>
+      {%- for i in e.items %}
+      <li>{{ i | markdownify | remove: "<p>" | remove: "</p>" }}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </li>
+  {%- endfor %}
+</ul>
+{%- endif -%}

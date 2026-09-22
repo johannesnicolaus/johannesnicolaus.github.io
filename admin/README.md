@@ -1,58 +1,60 @@
-# Sveltia CMS (Admin)
+# Sveltia CMS
 
-This folder contains the Sveltia CMS admin for this Jekyll site.
+Browser-based editing for this site, at [jnicolaus.com/admin/](https://jnicolaus.com/admin/).
 
-## Quick overview
-- CMS config: `admin/config.yml`
-- Admin UI entry: `admin/index.html`
+- `admin/index.html` — loads the CMS bundle from unpkg. Nothing else belongs in
+  this file: a stylesheet link or `type="module"` on the script tag stops the
+  CMS loading entirely.
+- `admin/config.yml` — what the CMS can edit. The first line points at the
+  published JSON schema, so an editor with schema support validates it as you
+  type. The CMS itself re-validates on every load and lists any problems on the
+  sign-in screen.
 
-## Local testing (token)
-1. Start the Jekyll site locally:
+## What you can edit
+
+| Section | Writes to |
+| --- | --- |
+| Blog posts | `_posts/*.md` |
+| Tutorials | `_tutorials/*.md` |
+| Pages → Front page | `_pages/about.md` (intro text) |
+| Pages → Contact page | `_pages/contact.md` |
+| Front page sections | `_data/publications.yml`, `talks.yml`, `education.yml`, `experience.yml`, `honors.yml`, `teaching.yml`, `workshops.yml`, `organizations.yml` |
+| Site settings → Navigation | `_data/navigation.yml` |
+
+The front page body holds the intro text plus `{% raw %}{% include %}{% endraw %}` lines that pull in each
+list. Edit the prose freely; leave the include lines alone unless you want to
+move or remove a whole section.
+
+Images uploaded through the CMS land in `assets/images/` and are referenced as
+`/assets/images/...`.
+
+## Signing in
+
+**GitHub** — needs an OAuth app and an authenticator service. Register the app
+under Settings → Developer settings → OAuth Apps, then add `base_url` (and
+`auth_endpoint` if your authenticator needs it) to the `backend` block in
+`config.yml`.
+
+**Access token** — no setup. Create a GitHub personal access token with `repo`
+scope and paste it when prompted. Never commit a token.
+
+## Editing locally
+
+Sveltia can work straight off the working directory, no token and no server
+round-trip. Serve the site and open the admin page:
 
 ```bash
-bundle install
 bundle exec jekyll serve
 ```
 
-2. Serve the admin folder (you can use the npm helper script):
+Then open <http://localhost:4000/admin/> and choose **Work with Local
+Repository**. Changes are written to your files; commit them yourself.
 
-```bash
-npm install
-npm run serve:admin
-# opens at http://localhost:9000 by default
-```
+## If something breaks
 
-3. Open the admin UI in the browser: `http://localhost:9000` (or `http://localhost:4000/admin` if you prefer to use the built-in site server).
-
-4. Sign in using **Access token**: create a GitHub personal access token with `repo` (or `public_repo`) scope and paste it into the admin UI when prompted. Do NOT commit tokens to the repository.
-
-## Local testing (OAuth)
-If you prefer OAuth (recommended for multiple users), create a GitHub OAuth App:
-
-1. On GitHub, go to Settings → Developer settings → OAuth Apps → New OAuth App.
-2. Application name: `Sveltia CMS for personal_website_2` (or similar).
-3. Homepage URL: `http://localhost:4000`
-4. Authorization callback URL: use the authenticator service you plan to use. For Netlify's built-in flow use `https://api.netlify.com/authenticate`.
-
-Update `admin/config.yml` with your OAuth base URL if you use a custom authenticator, for example:
-
-```yaml
-backend:
-  name: github
-  repo: johannesnicolaus/personal_website_2
-  base_url: https://api.netlify.com    # or your authenticator origin
-  auth_endpoint: auth
-  branch: main
-```
-
-Do not add client secrets or tokens to the repo.
-
-## Notes and recommendations
-- `media_folder` and `public_folder` in `admin/config.yml` point to `/images` — check that matches your actual image path.
-- If your default branch is `master` instead of `main`, change `branch: main` accordingly in `admin/config.yml`.
-- To restrict login methods set `auth_methods: [oauth]` or `[token]`.
-
-## Troubleshooting
-- If the editor does not show collections, open browser dev tools and check console errors — common issues are CORS or incorrect repo name/branch.
-- For OAuth errors, verify the OAuth App callback and the `base_url` are correct.
-
+- **Blank page** — check `admin/index.html` matches the minimal form above.
+- **Errors on the sign-in screen** — config validation problems; each message
+  names the collection, file and field.
+- **Saving drops front matter** — a key exists in the file but not in
+  `config.yml`. Add it as a field (use `widget: hidden` if it should not be
+  editable).

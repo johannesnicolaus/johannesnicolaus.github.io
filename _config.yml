@@ -16,19 +16,19 @@ description              : &description "Johannes Nicolaus Wibisana's academic p
 url                      : https://jnicolaus.com # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "johannesnicolaus/johannesnicolaus.github.io"
+repository               : "johannesnicolaus/personal_website_2"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Johannes Nicolaus Wibisana"
   pronouns         : # example: "she/her"  
   bio              : "A computational biologist"
   location         : "Okinawa, Japan"
-  employer         : "OIST"
+  employer         : "Okinawa Institute of Science and Technology"
   uri              : # URL
   email            : "johannes.nicolaus@gmail.com" 
 
@@ -42,6 +42,7 @@ author:
   semantic         : # URL
   ssrn             : # URL
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=johannes+nicolaus+wibisana"
+  researchmap      : "https://researchmap.jp/nicolaus"
   researchgate     : "https://www.researchgate.net/profile/Johannes-Wibisana"
   scopus           : # URL
   zotero           : # URL
@@ -137,7 +138,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Social media default site image
+og_image                 : "profile.jpg"  # fallback social preview image, relative to /images/
 og_description           :  # Social media default site image description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
@@ -160,6 +161,10 @@ include:
   - _pages
   - files
 exclude:
+  - Awesome-CV
+  - convert_html_to_md.py
+  - docker-compose.yaml
+  - _config_docker.yml
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -208,24 +213,16 @@ kramdown:
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
-  toc_levels: 1..6
+  toc_levels: 2..3
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
+  # Portfolio is kept but not built; flip output to true when there is content
   portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
+    output: false
     permalink: /:collection/:path/
   tutorials:
     output: true
@@ -245,6 +242,7 @@ defaults:
       comments: true
       share: true
       related: true
+      toc_sticky: true
   # _pages
   - scope:
       path: ""
@@ -252,24 +250,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
   # _portfolio
   - scope:
       path: ""
@@ -279,14 +259,6 @@ defaults:
       author_profile: true
       share: true
       comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
   # _tutorials
   - scope:
       path: ""
@@ -295,6 +267,7 @@ defaults:
       layout: single
       author_profile: true
       share: true
+      toc_sticky: true
 
 
 # Sass/SCSS

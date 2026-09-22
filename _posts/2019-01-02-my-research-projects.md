@@ -1,11 +1,6 @@
 ---
 title: My research projects
 date: '2019-01-02T23:34:00.002-08:00'
-author: Johannes Nicolaus Wibisana
-tags: 
-author_profile: true
-modified_time: '2019-01-02T23:35:20.529-08:00'
-layout: single
 excerpt: "Hi, haven't updated my blog in a very very long time but here I am lol. Happy new year to everyone! How was 2018? 2018 was a rather productive year for me, I started 2 new research projects and probab..."
 ---
 

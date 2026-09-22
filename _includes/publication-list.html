@@ -1,33 +1,34 @@
 {%- comment -%}
-Renders publications from _data/publications.yml, grouped by category and year.
+Renders publications from _data/publications.yml, grouped by year.
+Section headings are emitted as <h3> so they stay out of the page table of
+contents (which is built from the markdown "##" headings only).
 Usage:
-  {% include publication-list.html category="research" heading="Research papers" %}
+  {% include publication-list.html category="research" heading="Research articles" %}
 {%- endcomment -%}
 
 {%- assign entries = site.data.publications | where: "category", include.category -%}
 {%- if entries and entries.size > 0 -%}
-<h1 id="{{ include.category }}">{{ include.heading }}</h1>
+{%- if include.heading %}<h3 id="publications-{{ include.category }}">{{ include.heading }}</h3>{% endif %}
 
 {%- assign years = entries | map: "year" | uniq | sort | reverse -%}
-{%- for y in years %}
-<h2 id="{{ include.category }}-{{ y }}">{{ y }}</h2>
 <ol class="publication-list">
-  {%- for p in entries -%}
-    {%- if p.year == y -%}
-      {%- if p.url -%}
-        {%- assign link = p.url -%}
-      {%- elsif p.doi -%}
-        {%- assign link = p.doi | prepend: "https://doi.org/" -%}
-      {%- else -%}
-        {%- assign link = nil -%}
-      {%- endif %}
+  {%- for y in years -%}
+    {%- for p in entries -%}
+      {%- if p.year == y -%}
+        {%- if p.url -%}
+          {%- assign link = p.url -%}
+        {%- elsif p.doi -%}
+          {%- assign link = p.doi | prepend: "https://doi.org/" -%}
+        {%- else -%}
+          {%- assign link = nil -%}
+        {%- endif %}
   <li>
     {{ p.authors | markdownify | remove: "<p>" | remove: "</p>" }} ({{ p.year }}).
     {% if link %}<a href="{{ link }}" target="_blank" rel="noopener noreferrer">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}.
     <i>{{ p.venue }}</i>.
   </li>
-    {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
   {%- endfor %}
 </ol>
-{%- endfor %}
 {%- endif -%}

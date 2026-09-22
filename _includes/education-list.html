@@ -1,0 +1,23 @@
+{%- comment -%}
+Renders education entries from _data/education.yml.
+Usage: {% include education-list.html %}
+{%- endcomment -%}
+
+{%- assign entries = site.data.education -%}
+{%- if entries and entries.size > 0 -%}
+<ul class="cv-entry-list">
+  {%- for e in entries %}
+  <li class="cv-entry">
+    <span class="cv-entry__title">{{ e.degree }}</span>
+    <span class="cv-entry__meta">{{ e.institution }}{% if e.location %} &middot; {{ e.location }}{% endif %}{% if e.date %} &middot; {{ e.date }}{% endif %}</span>
+    {%- if e.items and e.items.size > 0 %}
+    <ul>
+      {%- for i in e.items %}
+      <li>{{ i | markdownify | remove: "<p>" | remove: "</p>" }}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </li>
+  {%- endfor %}
+</ul>
+{%- endif -%}

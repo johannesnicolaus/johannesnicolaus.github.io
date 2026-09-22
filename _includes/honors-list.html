@@ -1,0 +1,16 @@
+{%- comment -%}
+Renders honours and awards from _data/honors.yml.
+Usage: {% include honors-list.html %}
+{%- endcomment -%}
+
+{%- assign entries = site.data.honors -%}
+{%- if entries and entries.size > 0 -%}
+<ul class="cv-entry-list">
+  {%- for e in entries %}
+  <li class="cv-entry">
+    <span class="cv-entry__title">{{ e.title }}</span>
+    <span class="cv-entry__meta">{% if e.event %}{{ e.event }}{% if e.location or e.date %} &middot; {% endif %}{% endif %}{% if e.location %}{{ e.location }}{% if e.date %} &middot; {% endif %}{% endif %}{{ e.date }}</span>
+  </li>
+  {%- endfor %}
+</ul>
+{%- endif -%}

@@ -1,11 +1,6 @@
 ---
 title: Shirahama Marine Biology Field Trip 2017
 date: '2017-11-24T23:10:00.001-08:00'
-author: Johannes Nicolaus Wibisana
-tags: 
-author_profile: true
-modified_time: '2017-11-24T23:10:39.998-08:00'
-layout: single
 excerpt: "At the end of the first year, we have an optional (used to be compulsory) trip to Shirahama. If you don't know what Shirahama is, it is basically a beach in Southern Wakayama which is located South of..."
 ---
 

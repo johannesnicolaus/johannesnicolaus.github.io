@@ -1,14 +1,8 @@
 ---
-layout: single
 published: true
+date: '2023-02-01'
 title: "EMBL single-cell workshop in Heidelberg, Germany"
-author_profile: true
 toc: true
-toc_sticky: true
-feature_image: "/assets/images/"
-canonical_url: "https://jnicolaus.com/embl-workshop/"
-header:
-  og_image: "/assets/images/2022-04-17/"
 excerpt: "My experience attending an EMBO practical course on single-cell omics at EMBL Heidelberg campus."
 ---
 

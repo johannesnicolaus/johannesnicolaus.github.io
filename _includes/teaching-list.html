@@ -1,24 +1,24 @@
 {%- comment -%}
-Renders teaching entries from _data/teaching.yml, grouped by year only.
-Usage:
-  {% include teaching-list.html %}
+Renders teaching and training entries from _data/teaching.yml, newest first.
+Optional "items" bullets work the same way as in research experience.
+Usage: {% include teaching-list.html %}
 {%- endcomment -%}
 
 {%- assign entries = site.data.teaching -%}
 {%- if entries and entries.size > 0 -%}
-{%- assign years = entries | map: "year" | uniq | sort | reverse -%}
-{%- for y in years %}
-<h2 id="teaching-{{ y }}">{{ y }}</h2>
-<ol class="teaching-list">
-  {%- for t in entries -%}
-    {%- if t.year == y %}
-  <li>
-    {% if t.role %}<strong>{{ t.role }}</strong> — {% endif %}
-    {% if t.url %}<a href="{{ t.url }}">{{ t.title }}</a>{% else %}{{ t.title }}{% endif %}.
-    <i>{{ t.venue }}</i>{% if t.location %}, {{ t.location }}{% endif %}{% if t.date %} ({{ t.date }}){% endif %}.
+<ul class="cv-entry-list">
+  {%- for t in entries %}
+  <li class="cv-entry">
+    <span class="cv-entry__title">{% if t.role %}{{ t.role }} — {% endif %}{{ t.title }}</span>
+    <span class="cv-entry__meta">{{ t.venue }}{% if t.location %} &middot; {{ t.location }}{% endif %}{% if t.date %} &middot; {{ t.date }}{% endif %}</span>
+    {%- if t.items and t.items.size > 0 %}
+    <ul>
+      {%- for i in t.items %}
+      <li>{{ i | markdownify | remove: "<p>" | remove: "</p>" }}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
   </li>
-    {%- endif -%}
   {%- endfor %}
-</ol>
-{%- endfor %}
+</ul>
 {%- endif -%}

@@ -1,12 +1,11 @@
 ---
-layout: single
 published: false
+date: '2023-01-01'
 title: "Tutorial: Deploying shiny app on AWS"
-author_profile: true
 toc: true
-toc_sticky: true
-feature_image: "/assets/images/2022-04-30/renv-singularity-docker.png"
 excerpt: "Step-by-step guide for deploying Shiny applications on AWS cloud infrastructure."
+header:
+  teaser: "/assets/images/2022-04-30/renv-singularity-docker.png"
 ---
 
 ## Introduction

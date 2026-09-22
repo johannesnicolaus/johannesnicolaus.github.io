@@ -10,6 +10,13 @@
 #
 # Add new entries at the top. Order within a year is preserved as-listed.
 
+- category: review
+  year: 2026
+  authors: "T Kon, K Kataoka, YJ Luo, **JN Wibisana**, K Toga, N Uno, Y Monden, M Hamada"
+  title: "Transforming Life Science Through Chromosome-Level Genome Assemblies"
+  venue: "Genes to Cells"
+  doi: "10.1111/gtc.70145"
+
 - category: research
   year: 2025
   authors: "**JN Wibisana**\\*, RA Sallan\\*, T Ota, P Puchenkov, T Kubo, L Sallan\\*"
