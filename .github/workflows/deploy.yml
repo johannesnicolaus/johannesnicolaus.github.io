@@ -26,26 +26,31 @@ jobs:
   build-cv:
     name: Compile CV
     runs-on: ubuntu-latest
-    container: texlive/texlive:latest
     steps:
       - name: Check out the site and the Awesome-CV submodule
         uses: actions/checkout@v4
         with:
           submodules: recursive
 
-      - name: Trust the checkout inside the container
-        run: git config --global --add safe.directory '*'
-
       - name: Move the submodule to the tip of the CV repo
         run: git submodule update --remote --recursive Awesome-CV
 
       - name: Compile resume.tex with XeLaTeX
-        # examples/resume.tex is the real CV; examples/cv.tex in this repo is a
-        # placeholder cover letter, so "make" would build more than we need.
-        working-directory: Awesome-CV
+        # Deliberately the same image Awesome-CV/makecv.sh uses locally, NOT
+        # texlive/texlive:latest. Current TeX Live ships Source Sans 3 under the
+        # sourcesanspro package name, and its metrics differ enough from the
+        # original Source Sans Pro that entries overflow their boxes and the CV
+        # spills onto a third page. This image still has the older fonts, so CI
+        # output matches what you get from makecv.sh.
+        #
+        # examples/resume.tex is the real CV; examples/cv.tex is a placeholder
+        # cover letter, so "make" would build more than we need.
         run: |
-          xelatex -interaction=nonstopmode -halt-on-error \
-            -output-directory=examples examples/resume.tex
+          docker run --rm -e HOME=/tmp -w /doc \
+            -v "$PWD/Awesome-CV:/doc" \
+            jnicolaus/docker-texlive-full \
+            xelatex -interaction=nonstopmode -halt-on-error \
+              -output-directory=examples examples/resume.tex
 
       - name: Check the PDF came out
         run: |

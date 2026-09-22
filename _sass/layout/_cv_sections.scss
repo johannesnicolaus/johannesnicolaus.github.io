@@ -61,12 +61,18 @@
 
 /* Publication and talk lists */
 
+/* Match the detail text in the CV-style sections above (education, research
+   experience), which run at $type-size-6. These lists were inheriting the 1em
+   body size and read noticeably larger than everything around them. */
+
 .publication-list,
 .talk-list {
   margin-bottom: 1.5em;
+  font-size: $type-size-6;
+  line-height: 1.45;
 
   li {
-    margin-bottom: 0.6em;
+    margin-bottom: 0.5em;
   }
 }
 
