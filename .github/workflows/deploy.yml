@@ -43,19 +43,42 @@ jobs:
         # spills onto a third page. This image still has the older fonts, so CI
         # output matches what you get from makecv.sh.
         #
+        # Run XeLaTeX twice. The class loads hyperref and bookmark, which write
+        # their state to .aux and only settle on a second pass. Those files are
+        # gitignored, so a local rebuild always has them lying around from the
+        # previous run while CI starts cold - which is why a single CI pass laid
+        # the CV out one entry short per page and spilled onto a third page.
+        #
         # examples/resume.tex is the real CV; examples/cv.tex is a placeholder
         # cover letter, so "make" would build more than we need.
         run: |
-          docker run --rm -e HOME=/tmp -w /doc \
-            -v "$PWD/Awesome-CV:/doc" \
-            jnicolaus/docker-texlive-full \
-            xelatex -interaction=nonstopmode -halt-on-error \
-              -output-directory=examples examples/resume.tex
+          for pass in 1 2; do
+            echo "::group::XeLaTeX pass $pass"
+            docker run --rm -e HOME=/tmp -w /doc \
+              -v "$PWD/Awesome-CV:/doc" \
+              jnicolaus/docker-texlive-full \
+              xelatex -interaction=nonstopmode -halt-on-error \
+                -output-directory=examples examples/resume.tex
+            echo "::endgroup::"
+          done
 
       - name: Check the PDF came out
+        # The page count is the quick tell for a layout regression: the CV has
+        # fitted on two pages since the "fix spacing" commit, and a silent spill
+        # onto a third is exactly what a toolchain drift looks like. Warn rather
+        # than fail, so an unrelated content deploy is never blocked.
         run: |
           test -s Awesome-CV/examples/resume.pdf
-          echo "CV built: $(du -h Awesome-CV/examples/resume.pdf | cut -f1)"
+          size=$(du -h Awesome-CV/examples/resume.pdf | cut -f1)
+          if command -v pdfinfo >/dev/null 2>&1; then
+            pages=$(pdfinfo Awesome-CV/examples/resume.pdf | awk '/^Pages:/{print $2}')
+            echo "CV built: $size, $pages page(s)"
+            if [ "${pages:-0}" -gt 2 ]; then
+              echo "::warning::CV came out $pages pages (expected 2) - check the layout before sharing it."
+            fi
+          else
+            echo "CV built: $size"
+          fi
 
       - name: Hand it to the site build
         run: |
