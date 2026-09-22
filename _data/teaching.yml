@@ -1,18 +1,22 @@
 - year: 2026
   date: 2022-2026
   role: Mentor
-  title: Rotation student training
+  title: Rotation student & Intern training
   venue: Okinawa Institute of Science and Technology
   location: Okinawa, Japan
+  items:
+    - Trained 4 rotation students and a short internship student on genomics & transcriptomics analysis
 - year: 2022
   date: 2019 – 2022
   role: Mentor
   title: RNA-seq analysis training for visiting researchers
   venue: Laboratory for Cell Systems, Osaka University
   location: Osaka, Japan
+  items: []
 - year: 2022
   date: 2019 – 2022
   role: Coordinator
   title: Bioinformatics training and website management
   venue: Laboratory for Cell Systems, Osaka University
   location: Osaka, Japan
+  items: []
