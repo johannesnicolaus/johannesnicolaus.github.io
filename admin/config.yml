@@ -2,7 +2,7 @@
 
 backend:
   name: github
-  repo: johannesnicolaus/personal_website_2
+  repo: johannesnicolaus/johannesnicolaus.github.io
   branch: master
   auth_methods: [oauth, token]
   # "Sign in with GitHub" needs an OAuth client to keep the client secret off

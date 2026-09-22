@@ -34,7 +34,7 @@ on the weekly run. To have a CV commit rebuild the site straight away, add a
 workflow to the **Awesome-CV** repo that dispatches to this one.
 
 1. In this repo's account, create a fine-grained personal access token with
-   **Contents: read and write** on `johannesnicolaus/personal_website_2`.
+   **Contents: read and write** on `johannesnicolaus/johannesnicolaus.github.io`.
 2. In the **Awesome-CV** repo, save it as the secret `WEBSITE_DISPATCH_TOKEN`
    (Settings → Secrets and variables → Actions).
 3. Commit this file to the Awesome-CV repo as
@@ -56,7 +56,7 @@ jobs:
           curl -sSf -X POST \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${{ secrets.WEBSITE_DISPATCH_TOKEN }}" \
-            https://api.github.com/repos/johannesnicolaus/personal_website_2/dispatches \
+            https://api.github.com/repos/johannesnicolaus/johannesnicolaus.github.io/dispatches \
             -d '{"event_type":"cv-updated"}'
 ```
 
