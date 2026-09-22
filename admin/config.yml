@@ -5,6 +5,10 @@ backend:
   repo: johannesnicolaus/personal_website_2
   branch: master
   auth_methods: [oauth, token]
+  # "Sign in with GitHub" needs an OAuth client to keep the client secret off
+  # the browser. This is a sveltia-cms-auth Worker on Cloudflare; the GitHub
+  # OAuth app's callback URL is this same origin with /callback appended.
+  base_url: https://sveltia-cms-auth-2.johannes-nicolaus.workers.dev
 
 # Where uploads are written in the repo, and how they are referenced in content.
 media_folder: assets/images
