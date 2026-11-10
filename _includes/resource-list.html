@@ -1,0 +1,26 @@
+{%- comment -%}
+Renders _data/resources.yml as cards: linked title, description, extra links.
+Usage: {% include resource-list.html %}
+{%- endcomment -%}
+
+{%- assign entries = site.data.resources | default: empty -%}
+{%- if entries.size > 0 -%}
+<ul class="cv-entry-list resource-list">
+  {%- for r in entries %}
+  <li class="cv-entry">
+    <span class="cv-entry__title"><a href="{{ r.url }}" target="_blank" rel="noopener noreferrer">{{ r.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</a></span>
+    <span class="resource-list__host">{{ r.url | remove: "https://" | remove: "http://" }}</span>
+    {%- if r.description %}
+    <p class="resource-list__description">{{ r.description | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+    {%- endif %}
+    {%- if r.links and r.links.size > 0 %}
+    <p class="resource-list__links">
+      {%- for l in r.links %}
+      <a href="{{ l.url }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> {{ l.label }}</a>
+      {%- endfor %}
+    </p>
+    {%- endif %}
+  </li>
+  {%- endfor %}
+</ul>
+{%- endif -%}

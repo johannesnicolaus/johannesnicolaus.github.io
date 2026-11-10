@@ -104,6 +104,22 @@ jobs:
           name: cv-pdf
           path: files
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Refresh publications and peer reviews
+        # OpenAlex (by ORCID) + PubMed cross-check -> _data/publications_auto.json,
+        # ORCID peer reviews -> _data/peer_reviews_auto.json. The script only
+        # overwrites a file after a successful fetch, so if an API is down the
+        # committed snapshot is used and the deploy carries on.
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+        run: |
+          python3 scripts/fetch_publications.py \
+            || echo "::warning::Publication fetch failed; using the committed snapshot."
+
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'

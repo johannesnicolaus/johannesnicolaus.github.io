@@ -11,7 +11,8 @@ Usage:
 {%- if include.scope -%}{%- assign entries = entries | where: "scope", include.scope -%}{%- endif -%}
 {%- if include.type -%}{%- assign entries = entries | where: "type", include.type -%}{%- endif -%}
 {%- if entries and entries.size > 0 -%}
-{%- if include.heading %}<h3 id="talks-{{ include.scope | default: include.type }}">{{ include.heading }}</h3>{% endif %}
+{%- assign hl = include.level | default: 3 -%}
+{%- if include.heading %}<h{{ hl }} id="talks-{{ include.scope | default: include.type }}">{{ include.heading }}</h{{ hl }}>{% endif %}
 
 {%- assign years = entries | map: "year" | uniq | sort | reverse -%}
 <ul class="talk-list">

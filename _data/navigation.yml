@@ -4,8 +4,7 @@
 # prevents it from showing in the header, but does not remove the page itself.
 #
 # The site title on the left already links to the front page, so there is no
-# separate "About" item here. Publications, talks, teaching and the CV all live
-# on the front page, reachable from its table of contents.
+# separate "About" item here.
 #
 # Set "new_tab: true" on an item to open it in a new browser tab.
 
@@ -15,6 +14,18 @@ main:
 
   - title: "Tutorials"
     url: /tutorials/
+
+  - title: "Publications"
+    url: /publications/
+
+  - title: "Presentations"
+    url: /presentations/
+
+  - title: "Teaching"
+    url: /teaching/
+
+  - title: "Resources"
+    url: /resources/
 
   - title: "CV"
     url: /files/cv.pdf

@@ -137,7 +137,7 @@ collections:
     label: Pages
     description: >-
       Standalone pages. The front page intro lives here; the lists below it come
-      from "Front page sections".
+      from "Lists".
     icon: description
     files:
       - name: about
@@ -168,6 +168,94 @@ collections:
               Leave the include lines alone unless you want to move or drop a
               whole section.
 
+      - name: publications_page
+        label: Publications page
+        file: _pages/publications.md
+        icon: menu_book
+        preview_path: "publications"
+        fields:
+          - { name: title, label: Heading, widget: string }
+          - { name: permalink, label: Permalink, widget: hidden, default: /publications/ }
+          - { name: author_profile, label: Author profile, widget: hidden, default: true }
+          - { name: toc, label: Table of contents, widget: hidden, default: true }
+          - { name: toc_label, label: Table of contents heading, widget: hidden, default: On this page }
+          - { name: toc_sticky, label: Sticky table of contents, widget: hidden, default: true }
+          - name: redirect_from
+            label: Redirect from
+            widget: list
+            required: false
+            field: { name: url, label: Old URL, widget: string }
+          - name: body
+            label: Page body
+            widget: markdown
+            hint: >-
+              Intro text plus the include lines that pull in the lists. Edit the
+              lists themselves under "Lists".
+
+      - name: presentations_page
+        label: Presentations page
+        file: _pages/presentations.md
+        icon: co_present
+        preview_path: "presentations"
+        fields:
+          - { name: title, label: Heading, widget: string }
+          - { name: permalink, label: Permalink, widget: hidden, default: /presentations/ }
+          - { name: author_profile, label: Author profile, widget: hidden, default: true }
+          - { name: toc, label: Table of contents, widget: hidden, default: true }
+          - { name: toc_label, label: Table of contents heading, widget: hidden, default: On this page }
+          - { name: toc_sticky, label: Sticky table of contents, widget: hidden, default: true }
+          - name: redirect_from
+            label: Redirect from
+            widget: list
+            required: false
+            field: { name: url, label: Old URL, widget: string }
+          - name: body
+            label: Page body
+            widget: markdown
+            hint: >-
+              Intro text plus the include lines that pull in the lists. Edit the
+              lists themselves under "Lists".
+
+      - name: teaching_page
+        label: Teaching page
+        file: _pages/teaching.md
+        icon: school
+        preview_path: "teaching"
+        fields:
+          - { name: title, label: Heading, widget: string }
+          - { name: permalink, label: Permalink, widget: hidden, default: /teaching/ }
+          - { name: author_profile, label: Author profile, widget: hidden, default: true }
+          - { name: toc, label: Table of contents, widget: hidden, default: true }
+          - { name: toc_label, label: Table of contents heading, widget: hidden, default: On this page }
+          - { name: toc_sticky, label: Sticky table of contents, widget: hidden, default: true }
+          - name: redirect_from
+            label: Redirect from
+            widget: list
+            required: false
+            field: { name: url, label: Old URL, widget: string }
+          - name: body
+            label: Page body
+            widget: markdown
+            hint: >-
+              Intro text plus the include lines that pull in the lists. Edit the
+              lists themselves under "Lists".
+
+      - name: resources_page
+        label: Resources page
+        file: _pages/resources.md
+        icon: build
+        preview_path: "resources"
+        fields:
+          - { name: title, label: Heading, widget: string }
+          - { name: permalink, label: Permalink, widget: hidden, default: /resources/ }
+          - { name: author_profile, label: Author profile, widget: hidden, default: true }
+          - name: body
+            label: Page body
+            widget: markdown
+            hint: >-
+              Intro text plus the include line that pulls in the list. Edit the
+              resources themselves under "Lists".
+
       - name: contact
         label: Contact page
         file: _pages/contact.md
@@ -182,50 +270,79 @@ collections:
 
   # ------------------------------------------------- front page sections -----
   - name: sections
-    label: Front page sections
+    label: Lists
     description: >-
-      The structured lists rendered on the front page. These are also the source
-      for the publication and presentation lists.
+      The structured lists behind the front page and the Publications,
+      Presentations and Teaching pages.
     icon: list_alt
     files:
       - name: publications
-        label: Publications
+        label: Publication corrections
         file: _data/publications.yml
         icon: menu_book
+        description: >-
+          The publication list updates itself from OpenAlex, ORCID and PubMed on
+          every deploy. Use this only to hide a wrong match or add/correct a work.
         fields:
-          - name: publications
-            label: Publications
-            label_singular: Publication
+          - name: hidden
+            label: Hidden works
+            label_singular: Hidden work
             widget: list
-            root: true
+            required: false
+            summary: "{{fields.id}}"
+            fields:
+              - { name: id, label: DOI, widget: string, hint: "e.g. 10.1371/journal.pgen.1010235" }
+              - { name: note, label: Why hidden, widget: string, required: false }
+          - name: manual
+            label: Manual entries
+            label_singular: Manual entry
+            widget: list
+            required: false
+            hint: >-
+              Works the sources miss, or corrections. An entry with the same DOI
+              as an automatic one replaces it.
             summary: "{{fields.year}} - {{fields.title}}"
             fields:
-              - name: category
-                label: Category
-                widget: select
-                options:
-                  - { label: Research article, value: research }
-                  - { label: Review article, value: review }
-                  - { label: Book chapter, value: chapter }
-              - { name: year, label: Year, widget: number, value_type: int }
+              - { name: title, label: Title, widget: string }
               - name: authors
                 label: Authors
                 widget: string
-                hint: >-
-                  Wrap your own name in double asterisks for bold. Use a
-                  backslash before an asterisk for a corresponding-author mark.
-              - { name: title, label: Title, widget: string }
+                hint: Comma-separated, e.g. "JN Wibisana*, K Iida, M Okada". Your name is bolded automatically.
               - { name: venue, label: Journal or book, widget: string }
-              - name: doi
-                label: DOI
-                widget: string
-                required: false
-                hint: "Just the DOI, e.g. 10.1371/journal.pgen.1010235"
-              - name: url
-                label: Link
-                widget: string
-                required: false
-                hint: Overrides the DOI link when set.
+              - { name: year, label: Year, widget: number, value_type: int }
+              - name: type
+                label: Type
+                widget: select
+                options:
+                  - { label: Research article, value: article }
+                  - { label: Review, value: review }
+                  - { label: Book chapter, value: book-chapter }
+                  - { label: Conference paper, value: conference-paper }
+                  - { label: Preprint, value: preprint }
+              - { name: doi, label: DOI, widget: string, required: false }
+              - { name: url, label: Link, widget: string, required: false, hint: Used when there is no DOI. }
+              - { name: volume, label: Volume, widget: string, required: false }
+              - { name: issue, label: Issue, widget: string, required: false }
+              - { name: pages, label: Pages, widget: string, required: false }
+              - { name: note, label: Note, widget: string, required: false }
+
+      - name: peer_reviews
+        label: Peer review
+        file: _data/peer_reviews.yml
+        icon: rate_review
+        description: >-
+          Reviews ORCID doesn't know about. ORCID's own records are added
+          automatically on every deploy.
+        fields:
+          - name: peer_reviews
+            label: Reviews
+            label_singular: Review
+            widget: list
+            root: true
+            summary: "{{fields.journal}} ({{fields.year}})"
+            fields:
+              - { name: journal, label: Journal, widget: string }
+              - { name: year, label: Year, widget: number, value_type: int }
 
       - name: talks
         label: Conference presentations
@@ -335,10 +452,17 @@ collections:
             root: true
             summary: "{{fields.title}}"
             fields:
+              - name: category
+                label: Section
+                widget: select
+                options:
+                  - { label: Outreach, value: outreach }
+                  - { label: Mentoring, value: mentoring }
+                  - { label: Training, value: training }
               - { name: year, label: Year, widget: number, value_type: int }
               - { name: date, label: Dates, widget: string, required: false }
-              - { name: role, label: Role, widget: string, required: false }
-              - { name: title, label: Title, widget: string }
+              - { name: role, label: Role, widget: string, required: false, hint: "For mentoring: the person's role, e.g. Rotation PhD student" }
+              - { name: title, label: Title, widget: string, hint: "For mentoring: the person's name" }
               - { name: venue, label: Institution, widget: string }
               - { name: location, label: Location, widget: string, required: false }
               - name: items
@@ -384,6 +508,30 @@ collections:
                 widget: list
                 required: false
                 field: { name: item, label: Detail, widget: string }
+
+      - name: resources
+        label: Resources
+        file: _data/resources.yml
+        icon: build
+        fields:
+          - name: resources
+            label: Resources
+            label_singular: Resource
+            widget: list
+            root: true
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: Name, widget: string, hint: "Markdown allowed, e.g. *Oikopleura dioica*" }
+              - { name: url, label: Main link, widget: string }
+              - { name: description, label: Description, widget: text, required: false }
+              - name: links
+                label: Extra links
+                widget: list
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { name: label, label: Label, widget: string }
+                  - { name: url, label: URL, widget: string }
 
   # ---------------------------------------------------------- navigation -----
   - name: settings

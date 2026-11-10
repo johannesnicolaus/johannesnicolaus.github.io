@@ -1,22 +1,69 @@
-- year: 2026
-  date: 2022-2026
-  role: Mentor
-  title: Rotation student & Intern training
+- category: outreach
+  year: 2025
+  date: 28 January 2025
+  title: SEED Program for Super Science High School students
   venue: Okinawa Institute of Science and Technology
   location: Okinawa, Japan
   items:
-    - Trained 4 rotation students and a short internship student on genomics & transcriptomics analysis
-- year: 2022
+    - Career talk
+    - 'Lecture: "Introduction to Gene Regulation"'
+    - Hands-on activity on DNA
+    - Lab tour, run together with other members of the unit
+
+- category: mentoring
+  year: 2026
+  title: Kanchi Nanjo
+  role: Rotation PhD student
+  venue: Okinawa Institute of Science and Technology
+
+- category: mentoring
+  year: 2026
+  title: Emily Ito
+  role: Rotation PhD student
+  venue: Okinawa Institute of Science and Technology
+
+- category: mentoring
+  year: 2026
+  title: Amelia Atmowidjojo
+  role: Visiting researcher
+  venue: Okinawa Institute of Science and Technology
+
+- category: mentoring
+  year: 2025
+  title: Kian Murray
+  role: Rotation student
+  venue: Okinawa Institute of Science and Technology
+
+- category: mentoring
+  year: 2025
+  title: Liudmila Poliushkevic
+  role: Rotation PhD student
+  venue: Okinawa Institute of Science and Technology
+
+- category: mentoring
+  year: 2024
+  title: Yutei Takahashi
+  role: Rotation PhD student
+  venue: Okinawa Institute of Science and Technology
+
+- category: mentoring
+  year: 2023
+  title: Takamasa Taguchi
+  role: Keio–OIST Summer Camp
+  venue: Okinawa Institute of Science and Technology
+
+- category: training
+  year: 2022
   date: 2019 – 2022
   role: Mentor
   title: RNA-seq analysis training for visiting researchers
   venue: Laboratory for Cell Systems, Osaka University
   location: Osaka, Japan
-  items: []
-- year: 2022
+
+- category: training
+  year: 2022
   date: 2019 – 2022
   role: Coordinator
   title: Bioinformatics training and website management
   venue: Laboratory for Cell Systems, Osaka University
   location: Osaka, Japan
-  items: []

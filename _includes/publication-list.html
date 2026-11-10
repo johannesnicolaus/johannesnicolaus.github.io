@@ -1,34 +1,45 @@
 {%- comment -%}
-Renders publications from _data/publications.yml, grouped by year.
-Section headings are emitted as <h3> so they stay out of the page table of
-contents (which is built from the markdown "##" headings only).
+Renders one type of publication: the automatic list (_data/publications_auto.json,
+fetched from OpenAlex/ORCID/PubMed by scripts/fetch_publications.py) merged with
+the corrections in _data/publications.yml ("hidden" drops a DOI, a "manual"
+entry adds a work or replaces the automatic record with the same DOI).
+
+Emits nothing at all when the type has no entries, so empty sections vanish.
+
 Usage:
-  {% include publication-list.html category="research" heading="Research articles" %}
+  {% include publication-list.html type="article" heading="Research articles" %}
+  type: article | review | book-chapter | conference-paper | preprint
 {%- endcomment -%}
 
-{%- assign entries = site.data.publications | where: "category", include.category -%}
-{%- if entries and entries.size > 0 -%}
-{%- if include.heading %}<h3 id="publications-{{ include.category }}">{{ include.heading }}</h3>{% endif %}
+{%- assign auto = site.data.publications_auto | default: empty -%}
+{%- assign manual = site.data.publications.manual | default: empty -%}
+{%- assign hidden = site.data.publications.hidden | default: empty -%}
 
-{%- assign years = entries | map: "year" | uniq | sort | reverse -%}
+{%- comment -%} "|doi|doi|" lookup string of DOIs the automatic list must skip {%- endcomment -%}
+{%- capture skip -%}|{% for h in hidden %}{{ h.id | downcase | remove: "https://doi.org/" | remove: "doi:" }}|{% endfor %}{% for m in manual %}{% if m.doi %}{{ m.doi | downcase | remove: "https://doi.org/" }}|{% endif %}{% endfor %}{%- endcapture -%}
+
+{%- assign years = auto | map: "year" -%}
+{%- assign manual_years = manual | map: "year" -%}
+{%- assign years = years | concat: manual_years | uniq | sort | reverse -%}
+
+{%- capture items -%}
+{%- for y in years -%}
+  {%- for p in manual -%}
+    {%- if p.year == y and p.type == include.type -%}{%- include publication-item.html p=p -%}{%- endif -%}
+  {%- endfor -%}
+  {%- for p in auto -%}
+    {%- if p.year != y or p.type != include.type -%}{%- continue -%}{%- endif -%}
+    {%- capture key -%}|{{ p.doi | downcase }}|{%- endcapture -%}
+    {%- if p.doi and skip contains key -%}{%- continue -%}{%- endif -%}
+    {%- include publication-item.html p=p -%}
+  {%- endfor -%}
+{%- endfor -%}
+{%- endcapture -%}
+
+{%- assign items = items | strip -%}
+{%- if items != "" -%}
+<h2 id="publications-{{ include.type }}">{{ include.heading }}</h2>
 <ol class="publication-list">
-  {%- for y in years -%}
-    {%- for p in entries -%}
-      {%- if p.year == y -%}
-        {%- if p.url -%}
-          {%- assign link = p.url -%}
-        {%- elsif p.doi -%}
-          {%- assign link = p.doi | prepend: "https://doi.org/" -%}
-        {%- else -%}
-          {%- assign link = nil -%}
-        {%- endif %}
-  <li>
-    {{ p.authors | markdownify | remove: "<p>" | remove: "</p>" }} ({{ p.year }}).
-    {% if link %}<a href="{{ link }}" target="_blank" rel="noopener noreferrer">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}.
-    <i>{{ p.venue }}</i>.
-  </li>
-      {%- endif -%}
-    {%- endfor -%}
-  {%- endfor %}
+  {{ items }}
 </ol>
 {%- endif -%}

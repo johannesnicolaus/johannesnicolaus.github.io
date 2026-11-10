@@ -1,0 +1,63 @@
+{%- comment -%}
+Journals reviewed for: ORCID records (_data/peer_reviews_auto.json, fetched by
+scripts/fetch_publications.py) merged with manual entries
+(_data/peer_reviews.yml). One line per journal, years de-duplicated, journals
+ordered by their most recent review.
+
+Usage: {% include peer-review-list.html %}
+{%- endcomment -%}
+
+{%- assign auto = site.data.peer_reviews_auto | default: empty -%}
+{%- assign manual = site.data.peer_reviews | default: empty -%}
+{%- assign all = auto | concat: manual -%}
+
+{%- comment -%} Group by journal, keyed on the lower-cased name {%- endcomment -%}
+{%- assign journals = all | map: "journal" | uniq -%}
+{%- assign seen = "|" -%}
+{%- capture rows -%}
+{%- for j in journals -%}
+  {%- assign jkey = j | downcase -%}
+  {%- capture probe -%}|{{ jkey }}|{%- endcapture -%}
+  {%- if seen contains probe -%}{%- continue -%}{%- endif -%}
+  {%- assign seen = seen | append: jkey | append: "|" -%}
+  {%- assign years = "" | split: "" -%}
+  {%- for r in all -%}
+    {%- assign rkey = r.journal | downcase -%}
+    {%- if rkey == jkey and r.year -%}{%- assign one = r.year | append: "" | split: "," -%}{%- assign years = years | concat: one -%}{%- endif -%}
+  {%- endfor -%}
+  {%- assign years = years | uniq | sort -%}
+  {{ years.last | default: "0000" }}~{{ j }}~{{ years | join: ", " }}^
+{%- endfor -%}
+{%- endcapture -%}
+
+{%- comment -%} Newest year first; journals within a year in alphabetical order {%- endcomment -%}
+{%- assign unsorted = rows | strip | split: "^" -%}
+{%- assign row_years = "" | split: "" -%}
+{%- for row in unsorted -%}{%- assign y = row | strip | split: "~" | first | split: "," -%}{%- assign row_years = row_years | concat: y -%}{%- endfor -%}
+{%- assign row_years = row_years | uniq | sort | reverse -%}
+{%- assign rows = "" | split: "" -%}
+{%- for y in row_years -%}
+  {%- assign in_year = "" | split: "" -%}
+  {%- for row in unsorted -%}
+    {%- assign r = row | strip -%}
+    {%- capture prefix -%}{{ y }}~{%- endcapture -%}
+    {%- assign r_prefix = r | slice: 0, prefix.size -%}
+    {%- if r_prefix == prefix -%}{%- assign one = r | split: "^" -%}{%- assign in_year = in_year | concat: one -%}{%- endif -%}
+  {%- endfor -%}
+  {%- assign in_year = in_year | sort_natural -%}
+  {%- assign rows = rows | concat: in_year -%}
+{%- endfor -%}
+{%- if rows.size > 0 -%}
+<ul class="cv-entry-list peer-review-list">
+  {%- for row in rows -%}
+    {%- assign f = row | strip | split: "~" -%}
+    {%- if f[1] == nil -%}{%- continue -%}{%- endif %}
+  <li class="cv-entry">
+    <span class="cv-entry__title"><i>{{ f[1] }}</i></span>
+    {%- if f[2] and f[2] != "" %}
+    <span class="cv-entry__meta">Reviewer &middot; {{ f[2] }}</span>
+    {%- endif %}
+  </li>
+  {%- endfor %}
+</ul>
+{%- endif -%}

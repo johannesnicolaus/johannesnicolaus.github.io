@@ -1,13 +1,29 @@
 {%- comment -%}
-Renders teaching and training entries from _data/teaching.yml, newest first.
-Optional "items" bullets work the same way as in research experience.
-Usage: {% include teaching-list.html %}
+Renders teaching entries from _data/teaching.yml, newest first.
+
+  {% include teaching-list.html category="outreach" %}
+  {% include teaching-list.html category="mentoring" %}   compact: one line per person
+  {% include teaching-list.html category="training" %}
+
+Without category, every entry is listed. Optional "items" bullets work the
+same way as in research experience.
 {%- endcomment -%}
 
-{%- assign entries = site.data.teaching -%}
-{%- if entries and entries.size > 0 -%}
+{%- assign entries = site.data.teaching | default: empty -%}
+{%- if include.category -%}{%- assign entries = entries | where: "category", include.category -%}{%- endif -%}
+{%- comment -%} Newest year first; within a year, keep the order of the data file {%- endcomment -%}
+{%- assign years = entries | map: "year" | uniq | sort | reverse -%}
+
+{%- if entries.size > 0 -%}
+{%- if include.category == "mentoring" -%}
+<ul class="mentee-list">
+  {%- for y in years -%}{%- for t in entries -%}{%- if t.year != y -%}{%- continue -%}{%- endif %}
+  <li><span class="mentee-list__year">{{ t.year }}</span> <strong>{{ t.title }}</strong>{% if t.role %} — {{ t.role }}{% endif %}</li>
+  {%- endfor -%}{%- endfor %}
+</ul>
+{%- else -%}
 <ul class="cv-entry-list">
-  {%- for t in entries %}
+  {%- for y in years -%}{%- for t in entries -%}{%- if t.year != y -%}{%- continue -%}{%- endif %}
   <li class="cv-entry">
     <span class="cv-entry__title">{% if t.role %}{{ t.role }} — {% endif %}{{ t.title }}</span>
     <span class="cv-entry__meta">{{ t.venue }}{% if t.location %} &middot; {{ t.location }}{% endif %}{% if t.date %} &middot; {{ t.date }}{% endif %}</span>
@@ -19,6 +35,7 @@ Usage: {% include teaching-list.html %}
     </ul>
     {%- endif %}
   </li>
-  {%- endfor %}
+  {%- endfor -%}{%- endfor %}
 </ul>
+{%- endif -%}
 {%- endif -%}

@@ -6,33 +6,15 @@ author_profile: true
 ---
 
 Feel free to get in touch about research, collaborations, or anything on this
-site. You can email me directly at
-[{{ site.author.email }}](mailto:{{ site.author.email }}), or use the form below.
+site. The best way to reach me is by email at
+[{{ site.author.email }}](mailto:{{ site.author.email }}).
 
-<!--
-  The form posts to Formspree. Your old site used the legacy endpoint
-  https://formspree.io/johannes.nicolaus@gmail.com, which Formspree retired.
-  Create a form at https://formspree.io/forms and replace YOUR_FORM_ID below
-  with the ID it gives you. Until then the form will not deliver mail.
--->
-<form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" accept-charset="UTF-8">
-  <p>
-    <label for="contact-name">Name</label>
-    <input id="contact-name" name="name" type="text" maxlength="255" required placeholder="Your name">
-  </p>
-  <p>
-    <label for="contact-email">Email address <small>(will remain private)</small></label>
-    <input id="contact-email" name="email" type="email" maxlength="255" required placeholder="email@address.com">
-  </p>
-  <p>
-    <label for="contact-message">Message</label>
-    <textarea id="contact-message" name="message" rows="10" required></textarea>
-  </p>
-  <p class="contact-form__honeypot">
-    <label for="contact-gotcha">Do not fill this out</label>
-    <input id="contact-gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
-  </p>
-  <p>
-    <button class="btn btn--large" type="submit">Send message</button>
-  </p>
-</form>
+## Sakura Science Exchange Program
+
+If you are an alumnus or alumna of JST's [Sakura Science Exchange Program](https://ssp.jst.go.jp/en/),
+you can also request a consultation with me about studying, working or doing an
+internship in Japan through the Sakura Science Club mentor contact form:
+
+<p class="page-actions">
+  <a href="https://www.jistec.or.jp/ssc/register/" class="btn btn--large" target="_blank" rel="noopener noreferrer"><i class="fas fa-paper-plane" aria-hidden="true"></i> Contact me via Sakura Science Club</a>
+</p>

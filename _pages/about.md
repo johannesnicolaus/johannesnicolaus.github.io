@@ -10,9 +10,6 @@ redirect_from:
   - /about.html
   - /cv/
   - /resume/
-  - /publications/
-  - /talks/
-  - /teaching/
 ---
 
 {% include base_path %}
@@ -32,31 +29,17 @@ In my spare time, I take care of my carnivorous plants, 3D print, watch football
 
 {% include education-list.html %}
 
-## Publications
-
-{% include publication-list.html category="research" heading="Research articles" %}
-
-{% include publication-list.html category="review" heading="Review articles" %}
-
-{% include publication-list.html category="chapter" heading="Book chapters" %}
-
-## Conference presentations
-
-{% include talk-list.html scope="international" heading="International" %}
-
-{% include talk-list.html scope="domestic" heading="Domestic" %}
-
 ## Honors and awards
 
 {% include honors-list.html %}
 
+## Peer review
+
+{% include peer-review-list.html %}
+
 ## Research experience
 
 {% include experience-list.html data=site.data.experience %}
-
-## Teaching and training
-
-{% include teaching-list.html %}
 
 ## Workshops attended
 

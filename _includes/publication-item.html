@@ -1,0 +1,27 @@
+{%- comment -%}
+One publication as an <li>. Used by publication-list.html for both automatic
+records (authors is an array) and manual entries (authors may be a string).
+{%- endcomment -%}
+{%- assign p = include.p -%}
+{%- if p.doi -%}
+  {%- capture link -%}https://doi.org/{{ p.doi | remove: "https://doi.org/" }}{%- endcapture -%}
+{%- elsif p.url -%}
+  {%- assign link = p.url -%}
+{%- elsif p.oa_url -%}
+  {%- assign link = p.oa_url -%}
+{%- else -%}
+  {%- assign link = nil -%}
+{%- endif -%}
+{%- assign authors = p.authors | join: ", " | replace: "JN Wibisana", "<strong>JN Wibisana</strong>" -%}
+{%- comment -%} OpenAlex reports article numbers as a range, e.g. "e70145-e70145" {%- endcomment -%}
+{%- assign pages = p.pages -%}
+{%- if pages -%}
+  {%- assign pp = pages | split: "-" -%}
+  {%- if pp.size == 2 and pp[0] == pp[1] -%}{%- assign pages = pp[0] -%}{%- endif -%}
+{%- endif -%}
+<li>
+  {{ authors }} ({{ p.year }}).
+  {% if link %}<a href="{{ link }}" target="_blank" rel="noopener noreferrer">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}.
+  <i>{{ p.venue }}</i>{% if p.volume %} {{ p.volume }}{% if p.issue %}({{ p.issue }}){% endif %}{% endif %}{% if pages %}, {{ pages }}{% endif %}.
+  {%- if p.note %} <span class="publication-note">{{ p.note }}</span>{% endif %}
+</li>

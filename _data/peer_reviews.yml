@@ -1,0 +1,8 @@
+# Peer reviews that are not on ORCID.
+#
+# ORCID's public peer-review records are fetched on every deploy into
+# _data/peer_reviews_auto.json (don't edit that file). Add anything ORCID is
+# missing here; the two lists are merged and grouped by journal.
+
+- journal: Trends in Genetics
+  year: 2025

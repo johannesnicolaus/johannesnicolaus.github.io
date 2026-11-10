@@ -1,0 +1,46 @@
+# Tools, pipelines and databases listed on /resources/, in display order.
+# Each entry:
+#   title:       name of the resource
+#   url:         main link (the title links here)
+#   description: one or two sentences (markdown allowed)
+#   links:       (optional) extra links, each with a label and url
+
+- title: OikoBrowser
+  url: https://oikobrowser.com
+  description: >-
+    Genome browser for *Oikopleura dioica* built on JBrowse 2, with BLAST
+    search across the assemblies.
+
+- title: CAGEscan Nextflow pipeline
+  url: https://github.com/johannesnicolaus/cagescan_nextflow
+  description: >-
+    Nextflow pipeline for processing CAGEscan and paired-end CAGE data.
+
+- title: Improved genome annotation of *Oikopleura dioica*
+  url: https://github.com/oist/Oikopleuradioica_genomeannotation
+  description: >-
+    Genome annotation of *Oikopleura dioica* populations from different
+    geographical locations.
+
+- title: rRNAscan
+  url: https://github.com/oist/luscombeu_rrnascan
+  description: >-
+    Nextflow pipeline to scan sequencing data for rRNA reads and extract them.
+
+- title: NANOPlasty and nanoplasty-nf
+  url: https://github.com/johannesnicolaus/nanoplasty-nf
+  description: >-
+    NANOPlasty is a de novo assembler for short circular genomes, such as
+    mitochondria and plastids, from long reads (ONT/PacBio).
+    nanoplasty-nf runs it as an nf-core-style Nextflow pipeline.
+  links:
+    - label: NANOPlasty
+      url: https://github.com/ndierckx/NANOPlasty
+    - label: nanoplasty-nf
+      url: https://github.com/johannesnicolaus/nanoplasty-nf
+
+- title: egapx_nf
+  url: https://github.com/johannesnicolaus/egapx_nf
+  description: >-
+    Pipeline that prepares RNA-seq data for NCBI's EGAPx genome annotation
+    pipeline from nf-core-style samplesheets, and runs downstream QC.

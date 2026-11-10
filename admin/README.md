@@ -16,10 +16,16 @@ Browser-based editing for this site, at [jnicolaus.com/admin/](https://jnicolaus
 | --- | --- |
 | Blog posts | `_posts/*.md` |
 | Tutorials | `_tutorials/*.md` |
-| Pages → Front page | `_pages/about.md` (intro text) |
-| Pages → Contact page | `_pages/contact.md` |
-| Front page sections | `_data/publications.yml`, `talks.yml`, `education.yml`, `experience.yml`, `honors.yml`, `teaching.yml`, `workshops.yml`, `organizations.yml` |
+| Pages | `_pages/about.md`, `publications.md`, `presentations.md`, `teaching.md`, `contact.md` |
+| Lists → Publication corrections | `_data/publications.yml` (hide / add / correct works) |
+| Lists → Peer review | `_data/peer_reviews.yml` (reviews missing from ORCID) |
+| Lists → everything else | `_data/talks.yml`, `education.yml`, `experience.yml`, `honors.yml`, `teaching.yml`, `workshops.yml`, `organizations.yml` |
 | Site settings → Navigation | `_data/navigation.yml` |
+
+The publication list and ORCID peer reviews are fetched automatically on every
+deploy by `scripts/fetch_publications.py` into `_data/publications_auto.json`
+and `_data/peer_reviews_auto.json`. Don't edit those two files; use the
+corrections lists above instead.
 
 The front page body holds the intro text plus `{% raw %}{% include %}{% endraw %}` lines that pull in each
 list. Edit the prose freely; leave the include lines alone unless you want to

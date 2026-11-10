@@ -76,31 +76,30 @@
   }
 }
 
-/* Contact form */
+/* Mentoring: one compact line per person */
 
-.contact-form {
-  max-width: 40em;
+.mentee-list {
+  margin: 0 0 1.5em;
+  padding-left: 0;
+  list-style: none;
+  font-size: $type-size-6;
 
-  label {
-    display: block;
-    margin-bottom: 0.25em;
-    font-family: $sans-serif;
-    font-weight: bold;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 100%;
+  li {
+    margin-bottom: 0.35em;
   }
 }
 
-.contact-form__honeypot {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+.mentee-list__year {
+  display: inline-block;
+  min-width: 3em;
+  color: var(--global-text-color-light);
+  font-family: $sans-serif;
+}
+
+/* Extra context on a publication, e.g. "In Japanese: ..." */
+
+.publication-note {
+  color: var(--global-text-color-light);
 }
 
 /* ==========================================================================
@@ -278,4 +277,37 @@ $masthead-height: 65px;
     top: $masthead-height + 18px;
     max-height: calc(100vh - #{$masthead-height} - 54px);
   }
+}
+
+/* Anchor jumps (TOC links, /#peer-review) land with the heading below the
+   fixed masthead instead of hidden behind it. */
+
+.page__content h2,
+.page__content h3 {
+  scroll-margin-top: $masthead-height + 18px;
+}
+
+/* Resources page */
+
+.resource-list {
+  .cv-entry__title a {
+    text-decoration: none;
+  }
+
+  p {
+    margin: 0.3em 0 0;
+    font-size: $type-size-6;
+  }
+}
+
+.resource-list__host {
+  display: block;
+  color: var(--global-text-color-light);
+  font-family: $sans-serif;
+  font-size: $type-size-7;
+}
+
+.resource-list__links a {
+  margin-right: 1em;
+  white-space: nowrap;
 }
