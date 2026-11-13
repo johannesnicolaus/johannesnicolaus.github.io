@@ -8,11 +8,18 @@
 # manual: extra works the sources miss, or corrections. A manual entry with the
 #         same DOI as an automatic one replaces it — e.g. to restore
 #         corresponding-author asterisks ("JN Wibisana*").
-#   type: article | review | book-chapter | conference-paper | preprint
+#   type: article | review | book-chapter | conference-paper | preprint |
+#         under-review (shown in its own section; no DOI or link needed)
 
 hidden: []
 
 manual:
+  - title: "Genome scrambling"
+    authors: "JN Wibisana et al."
+    venue: "Review article, under review"
+    year: 2026
+    type: under-review
+
   - title: "Prediction of transcriptional regulation in immune cells through single-cell analysis"
     authors: "JN Wibisana, K Iida, M Okada"
     venue: "Igaku no Ayumi (Journal of Clinical and Experimental Medicine)"

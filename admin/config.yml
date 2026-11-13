@@ -319,6 +319,7 @@ collections:
                   - { label: Book chapter, value: book-chapter }
                   - { label: Conference paper, value: conference-paper }
                   - { label: Preprint, value: preprint }
+                  - { label: Under review, value: under-review }
               - { name: doi, label: DOI, widget: string, required: false }
               - { name: url, label: Link, widget: string, required: false, hint: Used when there is no DOI. }
               - { name: volume, label: Volume, widget: string, required: false }

@@ -9,6 +9,8 @@ toc_sticky: true
 
 This list updates automatically from [OpenAlex](https://openalex.org/authors/A5051742293) and [ORCID]({{ site.author.orcid }}), cross-checked against PubMed. See also my [Google Scholar profile]({{ site.author.googlescholar }}).
 
+{% include publication-list.html type="under-review" heading="Manuscripts under review" %}
+
 {% include publication-list.html type="article" heading="Research articles" %}
 
 {% include publication-list.html type="review" heading="Reviews" %}
