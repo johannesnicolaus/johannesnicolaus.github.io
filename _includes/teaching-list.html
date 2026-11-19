@@ -18,7 +18,15 @@ same way as in research experience.
 {%- if include.category == "mentoring" -%}
 <ul class="mentee-list">
   {%- for y in years -%}{%- for t in entries -%}{%- if t.year != y -%}{%- continue -%}{%- endif %}
-  <li><span class="mentee-list__year">{{ t.year }}</span> <strong>{{ t.title }}</strong>{% if t.role %} — {{ t.role }}{% endif %}</li>
+  <li><span class="mentee-list__year">{{ t.year }}</span> <strong>{{ t.title }}</strong>{% if t.role %} — {{ t.role }}{% endif %}
+    {%- if t.items and t.items.size > 0 %}
+    <ul class="mentee-list__items">
+      {%- for i in t.items %}
+      <li>{{ i | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </li>
   {%- endfor -%}{%- endfor %}
 </ul>
 {%- else -%}

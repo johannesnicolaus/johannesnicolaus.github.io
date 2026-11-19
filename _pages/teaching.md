@@ -7,13 +7,13 @@ toc_label: On this page
 toc_sticky: true
 ---
 
-## Outreach
-
-{% include teaching-list.html category="outreach" %}
-
 ## Mentoring
 
 {% include teaching-list.html category="mentoring" %}
+
+## Outreach
+
+{% include teaching-list.html category="outreach" %}
 
 ## Training
 
